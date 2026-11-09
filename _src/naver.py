@@ -93,25 +93,46 @@ def _inline(s):
 
 PAGE = '''<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex"><title>네이버 복사용 — {title}</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <style>body{{margin:0;background:#eef0f3;font:16px/1.7 "Malgun Gothic","Noto Sans KR",sans-serif;color:#1f2328}}
 .bar{{position:sticky;top:0;background:#1f2328;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;z-index:2}}
-.bar b{{margin-right:auto}}button{{font:inherit;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;background:#03c75a;color:#fff;font-weight:bold}}
-button.t{{background:#fff;color:#1f2328}}.msg{{font-size:13px;color:#b9f6ca;min-width:120px}}
-.box{{max-width:760px;margin:16px auto;background:#fff;padding:22px 26px;border:1px solid #cfd4da}}.how{{max-width:760px;margin:12px auto 0;font-size:14px;color:#5d6670;padding:0 16px}}</style></head><body>
-<div class="bar"><b>네이버 복사용</b><button class="t" onclick="cp('t')">① 제목 복사</button><button onclick="cp('c')">② 본문 복사</button><span class="msg" id="m"></span></div>
-<div class="how">네이버 글쓰기 → ① 제목 칸에 붙여넣기 → ② 본문에 붙여넣기 → 카테고리 「{cat}」 선택 → 그림이 안 붙었으면 아래 그림을 저장해 올리기 → <b>AI 활용 설정</b> 확인 후 발행</div>
+.bar b{{margin-right:auto}}button{{font:inherit;border:0;border-radius:6px;padding:9px 16px;cursor:pointer;font-weight:bold}}
+#go{{background:#03c75a;color:#fff;font-size:17px;min-width:210px}}#zip{{background:#fff;color:#1f2328}}.sm{{background:#3a424b;color:#fff;padding:6px 10px;font-size:13px;font-weight:normal}}
+.msg{{width:100%;font-size:14px;color:#b9f6ca;min-height:20px}}
+.box{{max-width:760px;margin:16px auto;background:#fff;padding:22px 26px;border:1px solid #cfd4da}}
+.how{{max-width:760px;margin:12px auto 0;padding:0 16px;font-size:14px;color:#5d6670}}.how ol{{margin:4px 0;padding-left:1.3em}}</style></head><body>
+<div class="bar"><b>네이버 복사용</b>
+<button id="go" onclick="step()">① 제목 복사</button>
+<button id="zip" onclick="zipAll()">그림 모두 받기 (ZIP)</button>
+<button class="sm" onclick="cp('t')">제목만</button><button class="sm" onclick="cp('c')">본문만</button>
+<div class="msg" id="m">초록 버튼을 누르면 제목이 복사됩니다.</div></div>
+<div class="how"><ol><li>네이버 글쓰기를 열고 <b>초록 버튼</b> → 제목 칸에 <b>Ctrl+V</b></li>
+<li>초록 버튼을 <b>한 번 더</b> → 본문에 <b>Ctrl+V</b></li>
+<li>그림이 빠졌으면 <b>그림 모두 받기</b> → 압축을 풀어 네이버 사진 올리기</li>
+<li>카테고리 「{cat}」 선택 → <b>AI 활용 표시</b> 확인 → 발행</li></ol></div>
 <div class="box"><div id="t" style="font-size:24px;font-weight:bold">{title}</div></div>
 <div class="box" id="c">{body}</div>
 <script>
-async function cp(id){{const el=document.getElementById(id);const m=document.getElementById('m');
+let n=0;const go=document.getElementById('go'),m=document.getElementById('m');
+async function cp(id){{const el=document.getElementById(id);
 try{{const h=new Blob([el.innerHTML],{{type:'text/html'}}),t=new Blob([el.innerText],{{type:'text/plain'}});
-await navigator.clipboard.write([new ClipboardItem({{'text/html':h,'text/plain':t}})]);m.textContent=(id=='t'?'제목':'본문')+' 복사됨';}}
+await navigator.clipboard.write([new ClipboardItem({{'text/html':h,'text/plain':t}})]);return true;}}
 catch(e){{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);
-try{{document.execCommand('copy');m.textContent='복사됨';}}catch(_){{m.textContent='Ctrl+C를 누르세요';}}}}}}
+try{{return document.execCommand('copy');}}catch(_){{return false;}}}}}}
+async function step(){{
+ if(n%2===0){{if(await cp('t')){{m.textContent='제목 복사됨 → 네이버 제목 칸에 Ctrl+V. 다음은 본문입니다.';go.textContent='② 본문 복사';n++;}}else m.textContent='복사가 막혔습니다. Ctrl+C를 누르세요.';}}
+ else{{if(await cp('c')){{m.textContent='본문 복사됨 → 네이버 본문에 Ctrl+V. 끝나면 발행하세요.';go.textContent='처음부터 다시 (① 제목)';n++;}}else m.textContent='복사가 막혔습니다. Ctrl+C를 누르세요.';}}
+}}
+async function zipAll(){{const imgs=[...document.querySelectorAll('#c img')];if(!imgs.length){{m.textContent='이 글에는 그림이 없습니다.';return;}}
+ m.textContent='그림 묶는 중...';
+ try{{const z=new JSZip();let i=1;for(const im of imgs){{const r=await fetch(im.src);const b=await r.blob();z.file(String(i).padStart(2,'0')+'_그림.png',b);i++;}}
+ const out=await z.generateAsync({{type:'blob'}});const a=document.createElement('a');a.href=URL.createObjectURL(out);a.download='{slug}_그림.zip';document.body.appendChild(a);a.click();a.remove();
+ m.textContent='그림 '+imgs.length+'장을 ZIP으로 받았습니다(다운로드 폴더).';}}
+ catch(e){{m.textContent='ZIP 만들기 실패 — 그림을 오른쪽 클릭해 하나씩 저장하세요.';}}}}
 </script></body></html>'''
 
 
 def write(root, p):
     os.makedirs(os.path.join(root, 'naver'), exist_ok=True)
-    page = PAGE.format(title=html.escape(p['title']), cat=html.escape(p['category']), body=convert(p))
+    page = PAGE.format(title=html.escape(p['title']), cat=html.escape(p['category']), slug=p['slug'], body=convert(p))
     open(os.path.join(root, 'naver', p['slug'] + '.html'), 'w', encoding='utf-8').write(page)
