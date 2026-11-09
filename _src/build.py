@@ -46,6 +46,10 @@ def page(title,inner,rel,desc=''):
 <main>{inner}</main><footer><div class="in">공식 원문(국가법령정보센터·소방청·국립소방연구원)을 기준으로 작성합니다. 적용 전 해당 시점의 원문을 확인하세요.</div></footer></body></html>'''
 def item(p,rel):
     return f'<li><span class="cat">{html.escape(p["category"])}</span><span class="meta">{p["date"]}</span><br><a class="t" href="{rel}posts/{p["slug"]}.html">{html.escape(p["title"])}</a><div class="meta">{html.escape(p.get("summary",""))}</div></li>'
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import naver
+
 def main():
     posts=sorted((parse(f) for f in glob.glob(os.path.join(ROOT,'_src','posts','*.html'))),key=lambda p:p['date'],reverse=True)
     os.makedirs(os.path.join(ROOT,'posts'),exist_ok=True); os.makedirs(os.path.join(ROOT,'category'),exist_ok=True)
@@ -64,6 +68,7 @@ def main():
             tiles='<div class="tiles">'+''.join('<div class="tile"><div class="k">{}</div><div class="v">{}</div><div class="s">{}</div></div>'.format(*(t.split('|')+['',''])[:3]) for t in ts)+'</div>'
         tg=('<div class="tags">'+''.join(f'<span>#{html.escape(t.strip())}</span>' for t in p.get('tags','').split(',') if t.strip())+'</div>') if p.get('tags') else ''
         inner=hero+tiles+p['body']+tg
+        naver.write(ROOT, p)
         open(os.path.join(ROOT,'posts',p['slug']+'.html'),'w',encoding='utf-8').write(page(p['title']+' | '+S['title'],inner,'../',p.get('summary','')))
     open(os.path.join(ROOT,'index.html'),'w',encoding='utf-8').write(page(S['title'],f'<p class="meta">{html.escape(S["description"])}</p><ul class="list">'+''.join(item(p,'') for p in posts)+'</ul>',''))
     for c in S['categories']:
