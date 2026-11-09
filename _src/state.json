@@ -5,8 +5,24 @@
   },
   "known_versions_note": "위 2건만 2026-11-09 원문 확인. 나머지 법령·기준은 첫 실행 때 현재 판본을 기록(그날은 '변경'으로 보지 말 것).",
   "posted": [
-    {"date": "2026-11-09", "category": "소방시설 지침", "topic": "NFTC 103 2.7.8 보와 가장 가까운 헤드", "slug": "sprinkler-head-near-beam"},
-    {"date": "2026-11-05", "category": "소방 내진", "topic": "내진 수조·기초 패드 (이전 블로그 게시분, 미이전)", "slug": null}
+    {
+      "date": "2026-11-09",
+      "category": "소방 법개정",
+      "topic": "NFTC 103 2.8.1.4 송수구 표지 추가(제2026-35호)",
+      "slug": "sprinkler-fdc-sign"
+    },
+    {
+      "date": "2026-11-09",
+      "category": "소방시설 지침",
+      "topic": "NFTC 103 2.7.8 보와 가장 가까운 헤드",
+      "slug": "sprinkler-head-near-beam"
+    },
+    {
+      "date": "2026-11-05",
+      "category": "소방 내진",
+      "topic": "내진 수조·기초 패드 (이전 블로그 게시분, 미이전)",
+      "slug": null
+    }
   ],
   "topic_queue": [
     "NFTC 103 헤드 수평거리와 배치 기준",

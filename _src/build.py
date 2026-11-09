@@ -15,6 +15,19 @@ table{border-collapse:collapse;width:100%;margin:10px 0;font-size:.95em}th,td{bo
 img{max-width:100%;height:auto;background:#fff;border:1px solid var(--line)}figure{margin:16px 0}.note{font-size:.88em;color:var(--muted)}
 .ai{display:inline-block;font-size:.8em;border:1px solid var(--line);border-radius:3px;padding:1px 6px;color:var(--muted);margin-left:6px}
 ul.list{list-style:none;padding:0}ul.list li{padding:14px 0;border-bottom:1px solid var(--line)}ul.list a.t{font-weight:700;font-size:1.08em;text-decoration:none;color:var(--fg)}ul.list a.t:hover{color:var(--accent)}
+.hero{background:var(--soft);border-radius:12px;padding:18px 20px;margin:4px 0 16px}.hero h1{margin:.2em 0 .2em}
+.chip{display:inline-block;border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:1px 10px;font-size:.82em;margin:0 4px 6px 0;color:var(--muted)}
+.one{background:var(--bg);border-left:4px solid var(--red);border-radius:6px;padding:12px 14px;margin:12px 0 8px;font-size:1.08em}.why{margin:0}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 8px}@media(max-width:640px){.tiles{grid-template-columns:1fr}}
+.tile{border:1px solid var(--line);border-radius:8px;padding:12px 14px}.tile .k{font-size:.8em;color:var(--muted)}.tile .v{font-size:1.3em;font-weight:800;line-height:1.3}.tile .s{font-size:.82em;color:var(--muted)}
+.red{color:var(--red);font-weight:700}td.chg{background:rgba(192,0,0,.05)}
+.tl{display:flex;align-items:flex-start;margin:8px 0 4px}.st{flex:1;text-align:center;position:relative;font-size:.9em}
+.st:before{content:"";position:absolute;top:9px;left:0;right:0;height:3px;background:var(--line)}.st:first-child:before{left:50%}.st:last-child:before{right:50%}
+.dot{width:20px;height:20px;border-radius:50%;background:var(--bg);border:3px solid #6b7783;margin:0 auto 6px;position:relative}.st.now .dot{border-color:var(--red);background:var(--red)}
+details{border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:8px 0}summary{font-weight:700;cursor:pointer}
+
+.tags{margin-top:28px;padding-top:12px;border-top:1px solid var(--line)}.tags span{display:inline-block;font-size:.85em;color:var(--accent);background:var(--soft);border-radius:12px;padding:2px 10px;margin:3px 4px 3px 0}
+table.check td{vertical-align:top}
 .cat{font-size:.82em;color:var(--accent);margin-right:8px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85em}footer .in{padding-top:14px;padding-bottom:24px}
 '''
 def parse(path):
@@ -37,8 +50,20 @@ def main():
     posts=sorted((parse(f) for f in glob.glob(os.path.join(ROOT,'_src','posts','*.html'))),key=lambda p:p['date'],reverse=True)
     os.makedirs(os.path.join(ROOT,'posts'),exist_ok=True); os.makedirs(os.path.join(ROOT,'category'),exist_ok=True)
     for p in posts:
-        ai='<span class="ai">AI 활용 그림 포함</span>' if p.get('ai_images')=='true' else ''
-        inner=f'<div class="meta"><a href="../category/{cat_slug(p["category"])}.html">{html.escape(p["category"])}</a> · {p["date"]}{ai}</div><h1>{html.escape(p["title"])}</h1>{p["body"]}'
+        ai='<span class="chip">AI 활용 그림 포함</span>' if p.get('ai_images')=='true' else ''
+        chips=f'<span class="chip"><a href="../category/{cat_slug(p["category"])}.html" style="color:inherit;text-decoration:none">{html.escape(p["category"])}</a></span>'
+        if p.get('effective'): chips+=f'<span class="chip">{html.escape(p["effective"])}</span>'
+        chips+=f'<span class="chip">기준일 {p["date"]}</span>'+ai
+        sub=f'<div class="meta">{html.escape(p["subtitle"])}</div>' if p.get('subtitle') else ''
+        one=f'<div class="one"><b>한 줄 요약</b> — {p["oneline"]}</div>' if p.get('oneline') else ''
+        why=f'<p class="why"><b>왜?</b> {p["why"]}</p>' if p.get('why') else ''
+        hero=f'<div class="hero">{chips}<h1>{html.escape(p["title"])}</h1>{sub}{one}{why}</div>'
+        tiles=''
+        ts=[p[k] for k in ('tile1','tile2','tile3') if p.get(k)]
+        if ts:
+            tiles='<div class="tiles">'+''.join('<div class="tile"><div class="k">{}</div><div class="v">{}</div><div class="s">{}</div></div>'.format(*(t.split('|')+['',''])[:3]) for t in ts)+'</div>'
+        tg=('<div class="tags">'+''.join(f'<span>#{html.escape(t.strip())}</span>' for t in p.get('tags','').split(',') if t.strip())+'</div>') if p.get('tags') else ''
+        inner=hero+tiles+p['body']+tg
         open(os.path.join(ROOT,'posts',p['slug']+'.html'),'w',encoding='utf-8').write(page(p['title']+' | '+S['title'],inner,'../',p.get('summary','')))
     open(os.path.join(ROOT,'index.html'),'w',encoding='utf-8').write(page(S['title'],f'<p class="meta">{html.escape(S["description"])}</p><ul class="list">'+''.join(item(p,'') for p in posts)+'</ul>',''))
     for c in S['categories']:
