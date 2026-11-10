@@ -23,7 +23,7 @@ R.setPixelRatio(1); R.setSize(W,H); R.shadowMap.enabled=true; R.shadowMap.type=T
 R.outputColorSpace=THREE.SRGBColorSpace; wrap.prepend(R.domElement);
 const sc=new THREE.Scene(); sc.background=new THREE.Color('#f6f7f9');
 const c=S.camera||{pos:[10,2.2,9],target:[3,1.8,0],fov:42};
-const cam=new THREE.PerspectiveCamera(c.fov||42,W/H,0.05,200); cam.position.set(...c.pos); cam.lookAt(new THREE.Vector3(...c.target));
+const cam=c.ortho?new THREE.OrthographicCamera(-c.ortho*W/H/2,c.ortho*W/H/2,c.ortho/2,-c.ortho/2,0.05,200):new THREE.PerspectiveCamera(c.fov||42,W/H,0.05,200); cam.position.set(...c.pos); cam.lookAt(new THREE.Vector3(...c.target));
 sc.add(new THREE.HemisphereLight(0xffffff,0xd5dae0,2.6));
 const sun=new THREE.DirectionalLight(0xffffff,1.1); sun.position.set(6,9,8); sun.castShadow=true;
 sun.shadow.mapSize.set(2048,2048); Object.assign(sun.shadow.camera,{left:-15,right:15,top:15,bottom:-15}); sc.add(sun);
@@ -80,6 +80,7 @@ for(const o of (S.objects||[])){
  else if(o.type==='beam') box(o.min,o.max,mat||MAT.beam);
  else if(o.type==='pipe') cyl(o.from,o.to,(o.dia||.08)/2,mat||MAT.red);
  else if(o.type==='rod') cyl(o.from,o.to,(o.dia||.012)/2,mat||MAT.steel,12);
+ else if(o.type==='sphere'){const m=new THREE.Mesh(new THREE.SphereGeometry(o.r||.05,24,16),mat||MAT.red);m.position.set(...o.pos);add(m)}
  else if(o.type==='flex'){const cv=new THREE.CatmullRomCurve3(o.pts.map(V));const r=(o.dia||.05)/2;
   add(new THREE.Mesh(new THREE.TubeGeometry(cv,48,r,14,false),M('#aeb7c0',{metalness:.55,roughness:.35})));
   for(let i=1;i<24;i++){const t=i/24,p=cv.getPoint(t),tg=cv.getTangent(t);const tr=new THREE.Mesh(new THREE.TorusGeometry(r*1.12,r*.16,8,20),M('#7d8791',{metalness:.5,roughness:.4}));
