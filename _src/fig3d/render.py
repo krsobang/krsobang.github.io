@@ -19,11 +19,15 @@ def check_no_pipe_through_beam(spec):
     """규칙: 배관·행거봉은 보를 관통할 수 없다. 보 상자와 겹치면 렌더를 중단한다."""
     beams = [o for o in spec.get('objects', []) if o.get('type') == 'beam']
     bad = []
+    segs = []
     for o in spec.get('objects', []):
-        if o.get('type') not in ('pipe', 'rod'):
-            continue
-        a, b = o['from'], o['to']
-        r = o.get('dia', 0.05) / 2
+        if o.get('type') in ('pipe', 'rod'):
+            segs.append((o['type'], o['from'], o['to'], o.get('dia', 0.05) / 2))
+        elif o.get('type') == 'flex':
+            P = o['pts']
+            segs += [('flex', P[i], P[i + 1], o.get('dia', 0.05) / 2) for i in range(len(P) - 1)]
+    for typ, a, b, r in segs:
+        o = {'type': typ, 'from': a, 'to': b}
         for bm in beams:
             lo, hi = bm['min'], bm['max']
             for i in range(0, 201):
