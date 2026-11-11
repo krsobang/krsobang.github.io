@@ -37,7 +37,7 @@ def parse(path):
     for line in m.group(1).splitlines():
         k,v=line.split(':',1); meta[k.strip()]=v.strip()
     meta['body']=t[m.end():]; return meta
-def cat_slug(c): return {'소방 법개정':'law','질의·해석사례':'qa','소방시설 지침':'guide','각종서류':'forms','소방 내진개정':'seismic','교육 및 해설서':'edu','소방 입법예고':'notice'}[c]
+def cat_slug(c): return {'소방 법개정':'law','질의·해석사례':'qa','소방시설 지침':'guide','각종서류':'forms','소방 내진개정':'seismic','교육 및 해설서':'edu'}[c]
 def page(title,inner,rel,desc=''):
     navs=''.join(f'<a href="{rel}category/{cat_slug(c)}.html">{html.escape(c)}</a>' for c in S['categories'])
     return f'''<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
