@@ -72,6 +72,8 @@ const DEV={
   [-.15,.15].forEach(d=>{cyl([x+d,y,z+.14],[x+d,y,z+.26],.06,MAT.brass);disk([x+d,y,z+.26],.045,.0,MAT.dark)})},
  sign(p,o){const [x,y,z]=p,w=o.w||.6,h=o.h||.25;box([x-w/2,y-h/2,z],[x+w/2,y+h/2,z+.02],MAT.white);
   const f=new THREE.Mesh(new THREE.PlaneGeometry(w*.95,h*.85),texPanel(o.text||'',o.bg||'#ffffff',o.fg||'#1f2a36',w,h));f.position.set(x,y,z+.021);add(f,false)},
+ lamp(p,o){const [x,y,z]=p;cyl([x,y,z],[x,y,z+.025],.055,MAT.steel);const s=new THREE.Mesh(new THREE.SphereGeometry(.042,24,16,0,Math.PI*2,0,Math.PI/2),M(o.lamp||'#e0443a',{emissive:o.lamp||'#e0443a',emissiveIntensity:.35,roughness:.3}));
+  s.rotation.x=Math.PI/2;s.position.set(x,y,z+.025);add(s,false)},
  door(p,o){const [x,y,z]=p,w=o.w||.9,h=o.h||2.1;box([x-w/2,y,z],[x+w/2,y+h,z+.05],MAT.door)},
 };
 for(const o of (S.objects||[])){

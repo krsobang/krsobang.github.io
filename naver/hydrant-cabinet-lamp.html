@@ -1,0 +1,85 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>네이버 복사용 — 옥내소화전 함과 표시등, 어디에 무엇을 달아야 할까요? — NFTC 102 2.4 정리</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>body{margin:0;background:#eef0f3;font:16px/1.7 "Malgun Gothic","Noto Sans KR",sans-serif;color:#1f2328}
+.bar{position:sticky;top:0;background:#1f2328;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;z-index:2}
+.bar b{margin-right:auto}button{font:inherit;border:0;border-radius:6px;padding:9px 16px;cursor:pointer;font-weight:bold}
+#go{background:#03c75a;color:#fff;font-size:17px;min-width:210px}#zip{background:#fff;color:#1f2328}.sm{background:#3a424b;color:#fff;padding:6px 10px;font-size:13px;font-weight:normal}
+.msg{width:100%;font-size:14px;color:#b9f6ca;min-height:20px}
+.box{max-width:760px;margin:16px auto;background:#fff;padding:22px 26px;border:1px solid #cfd4da}
+.how{max-width:760px;margin:12px auto 0;padding:0 16px;font-size:14px;color:#5d6670}.how ol{margin:4px 0;padding-left:1.3em}</style></head><body>
+<div class="bar"><b>네이버 복사용</b>
+<button id="go" onclick="step()">① 제목 복사</button>
+<button id="zip" onclick="zipAll()">그림 모두 받기 (ZIP)</button>
+<button class="sm" onclick="cp('t')">제목만</button><button class="sm" onclick="cp('c')">본문만</button>
+<div class="msg" id="m">초록 버튼을 누르면 제목이 복사됩니다.</div></div>
+<div class="how"><ol><li>네이버 글쓰기를 열고 <b>초록 버튼</b> → 제목 칸에 <b>Ctrl+V</b></li>
+<li>초록 버튼을 <b>한 번 더</b> → 본문에 <b>Ctrl+V</b></li>
+<li>그림이 빠졌으면 <b>그림 모두 받기</b> → 압축을 풀어 네이버 사진 올리기</li>
+<li>카테고리 「교육 및 해설서」 선택 → <b>AI 활용 표시</b> 확인 → 발행</li></ol></div>
+<div class="box"><div id="t" style="font-size:24px;font-weight:bold">옥내소화전 함과 표시등, 어디에 무엇을 달아야 할까요? — NFTC 102 2.4 정리</div></div>
+<div class="box" id="c"><p style="color:#5d6670;font-size:13px">교육 및 해설서 · 국립소방연구원공고 제2026-34호 (2026. 7. 1. 시행) · 기준일 2026-11-11</p>
+<p style="color:#5d6670">옥내소화전설비의 화재안전기술기준(NFTC 102) 2.4.1·2.4.3·2.4.4·2.4.5 / NFPC 102 제7조</p>
+<p style="border-left:4px solid #c00000;background:#f6f7f9;padding:12px 14px;font-size:17px"><b>한 줄 요약</b> — 함은 <b>성능인증 제품</b>으로 사용에 장애 없게, 위치표시등은 <b>함의 상부</b>, 기동표시등은 <b>함 상부 또는 직근의 적색등</b>, 표면에 <b>"소화전"</b>, 사용요령 표지판은 문에 붙이면 <b>안·밖 모두</b>.</p>
+<p><b>왜?</b> 화재 때 처음 보는 사람도 소화전을 찾아 바로 쓸 수 있게 하고, 펌프가 기동했는지 현장에서 알 수 있게 하려는 기준입니다.</p>
+<table style="border-collapse:collapse;width:100%"><tr><td style="border:1px solid #d9dde2;padding:10px 12px;vertical-align:top;width:33%"><span style="color:#5d6670;font-size:13px">위치표시등</span><br><b style="font-size:20px">함의 상부</b><br><span style="color:#5d6670;font-size:13px">「표시등의 성능인증 및 제품검사의 기술기준」 적합</span></td><td style="border:1px solid #d9dde2;padding:10px 12px;vertical-align:top;width:33%"><span style="color:#5d6670;font-size:13px">기동표시등</span><br><b style="font-size:20px"><span style="color:#c00000;font-weight:bold">적색등</span></b><br><span style="color:#5d6670;font-size:13px">함 상부 또는 그 직근 (자체소방대 운영 시 생략 가능)</span></td><td style="border:1px solid #d9dde2;padding:10px 12px;vertical-align:top;width:33%"><span style="color:#5d6670;font-size:13px">사용요령 표지판</span><br><b style="font-size:20px">문 안·밖 모두</b><br><span style="color:#5d6670;font-size:13px">문에 붙이는 경우, 외국어·그림 포함</span></td></tr></table>
+<p style="font-size:19px;font-weight:bold;border-bottom:1px solid #cfd4da;padding-bottom:4px;margin-top:28px">1. 공식 기준 원문 (NFTC 102, 현행)</p>
+<div style="border:3px solid #c00000;padding:12px 14px;margin:12px 0">
+<p><b>2.4.1</b> 옥내소화전설비의 함은 다음의 기준에 따라 설치해야 한다.</p>
+<p>2.4.1.1 함은 소방청장이 정하여 고시한 「소화전함의 성능인증 및 제품검사의 기술기준」에 적합한 것으로 설치하되 밸브의 조작, 호스의 수납 및 문의 개방 등 옥내소화전의 사용에 장애가 없도록 설치할 것. 연결송수관의 방수구를 같이 설치하는 경우에도 또한 같다.<br/>
+2.4.1.2 2.4.1.1에도 불구하고 2.4.2.1의 기준을 초과하는 경우로서 기둥 또는 벽이 설치되지 않은 대형공간의 경우는 다음의 기준에 따라 설치할 수 있다.<br/>
+ 2.4.1.2.1 호스 및 관창은 방수구의 가장 가까운 장소의 벽 또는 기둥 등에 함을 설치하여 비치할 것<br/>
+ 2.4.1.2.2 방수구의 위치표지는 표시등 또는 축광도료 등으로 상시 확인이 가능토록 할 것</p>
+<p><b>2.4.3</b> 표시등은 다음의 기준에 따라 설치해야 한다.</p>
+<p>2.4.3.1 옥내소화전설비의 위치를 표시하는 표시등은 함의 상부에 설치하되, 소방청장이 고시하는 「표시등의 성능인증 및 제품검사의 기술기준」에 적합한 것으로 할 것<br/>
+2.4.3.2 가압송수장치의 기동을 표시하는 표시등은 옥내소화전함의 상부 또는 그 직근에 설치하되 적색등으로 할 것. 다만, 자체소방대를 구성하여 운영하는 경우(「위험물 안전관리법 시행령」 별표 8에서 정한 소방자동차와 자체소방대원의 규모를 말한다) 가압송수장치의 기동표시등을 설치하지 않을 수 있다.</p>
+<p><b>2.4.4</b> 옥내소화전설비의 함에는 그 표면에 "소화전"이라는 표시를 해야 한다.</p>
+<p><b>2.4.5</b> 옥내소화전설비의 함에는 함 가까이 보기 쉬운 곳에 그 사용요령을 기재한 표지판을 붙여야 하며, 표지판을 함의 문에 붙이는 경우에는 문의 내부 및 외부 모두에 붙여야 한다. 이 경우, 사용요령은 외국어와 시각적인 그림을 포함하여 작성해야 한다.</p>
+</div>
+<p style="color:#5d6670;font-size:13px">성능기준인 「옥내소화전설비의 화재안전성능기준(NFPC 102)」(소방청고시 제2025-25호, 2026. 3. 1. 시행) 제7조제1항·제3항·제4항·제5항에도 함, 위치표시등과 기동표시등 설치, "소화전" 표시, 사용요령 표지판이 같은 취지로 실려 있습니다. 방수구(2.4.2: 층마다, 수평거리 25 m 이하, 높이 1.5 m 이하, 호스 구경)는 다른 글에서 따로 다룹니다.</p>
+<h3>원문 이미지</h3>
+<figure><img alt="옥내소화전설비의 화재안전기술기준(NFTC 102) 2.4 함 및 방수구 등 원문 문구를 옮긴 이미지" src="https://krsobang.github.io/assets/img/2026-11-11-hydrant-cabinet-lamp/src1.png" style="max-width:100%"/><figcaption>NFTC 102 2.4 원문 — 국가법령정보센터 게시 문구를 그대로 옮긴 이미지(화면 캡처 아님, 2.4.2는 생략), 2026. 11. 11. 확인, 국립소방연구원공고 제2026-34호</figcaption></figure>
+<p style="font-size:19px;font-weight:bold;border-bottom:1px solid #cfd4da;padding-bottom:4px;margin-top:28px">2. 적용 조건</p>
+<p><b>① 함은 '제품'과 '설치 상태'를 함께 봅니다.</b> 함 자체는 「소화전함의 성능인증 및 제품검사의 기술기준」에 맞는 제품이어야 하고, 설치 후에는 밸브 조작·호스 수납·문 개방에 장애가 없어야 합니다. 연결송수관 방수구를 같은 함에 넣어도 마찬가지입니다.</p>
+<p><b>② 대형공간 특례(2.4.1.2)는 조건이 둘입니다.</b> 방수구 수평거리 기준(2.4.2.1)을 초과하는 경우이면서, 기둥이나 벽이 없는 대형공간일 것. 이때는 호스·관창을 방수구에서 가장 가까운 벽·기둥 등의 함에 비치하고, 방수구 위치는 표시등이나 축광도료 등으로 상시 확인되게 합니다.</p>
+<p><b>③ 표시등은 두 가지입니다.</b> 위치표시등(함의 상부, 표시등 성능인증 제품)과 기동표시등(함 상부 또는 그 직근, 적색등). 기동표시등은 원문이 정한 자체소방대(「위험물안전관리법 시행령」 별표 8 규모)를 운영하는 경우에만 생략할 수 있습니다.</p>
+<p><b>④ 표시와 표지판.</b> 함 표면에 "소화전" 표시. 사용요령 표지판은 함 가까이 보기 쉬운 곳에 붙이고, 문에 붙이면 문 안쪽·바깥쪽 모두에 붙입니다. 사용요령에는 외국어와 시각적인 그림이 들어가야 합니다.</p>
+<p style="font-size:19px;font-weight:bold;border-bottom:1px solid #cfd4da;padding-bottom:4px;margin-top:28px">3. 그림으로 보기</p>
+<figure><img alt="벽에 설치된 옥내소화전 함, 함 상부의 위치표시등과 기동표시등, 표면의 소화전 표시, 함 옆 사용요령 표지판을 표시한 입체 개념도" src="https://krsobang.github.io/assets/img/2026-11-11-hydrant-cabinet-lamp/fig1.png" style="max-width:100%"/></figure>
+<figure><img alt="기동표시등을 함 상부에 둔 예와 함 직근 벽에 둔 예, 사용요령 표지판을 벽에 붙인 예와 문에 붙인 예를 비교한 입체 개념도" src="https://krsobang.github.io/assets/img/2026-11-11-hydrant-cabinet-lamp/fig2.png" style="max-width:100%"/></figure>
+<p style="color:#5d6670;font-size:13px">그림은 모두 AI(Claude)로 그린 <b>비축척 개념도</b>입니다. 함 크기, 표시등 크기·간격·위치표시등 색, 표지판 크기는 원문에 수치가 없어 예시로 그렸습니다. 함 내부(방수구·호스·관창), 배관, 문 안쪽 면은 생략했습니다. 설치 적합 판정용 도면이 아닙니다.</p>
+<p><b>판단 기준점 주의:</b> 원문은 기동표시등 위치를 "상부 또는 그 직근"이라고만 쓰고 직근의 거리를 정하지 않습니다. 위치표시등 색·밝기 등 성능은 「표시등의 성능인증 및 제품검사의 기술기준」에 따르며, 이 글에서는 그 기준 원문을 확인하지 않았습니다. <b>해석이 갈리는 현장은 관할 소방서에 먼저 확인하세요.</b></p>
+<p style="font-size:19px;font-weight:bold;border-bottom:1px solid #cfd4da;padding-bottom:4px;margin-top:28px">4. 단계별 확인사항</p>
+<table style="border-collapse:collapse;width:100%"><tr><th style="border:1px solid #d9dde2;padding:8px 10px;vertical-align:top;text-align:left;background:#f4f6f8;font-weight:bold;width:22%">단계</th><th style="border:1px solid #d9dde2;padding:8px 10px;vertical-align:top;text-align:left;background:#f4f6f8;font-weight:bold">확인할 것</th></tr>
+<tr><td style="border:1px solid #d9dde2;padding:8px 10px;vertical-align:top;text-align:left"><b>설계</b></td><td style="border:1px solid #d9dde2;padding:8px 10px;vertical-align:top;text-align:left">함 위치를 문 개방·호스 인출 공간이 확보되는 곳에 배치. 대형공간 특례 적용 시 2.4.2.1 초과 근거와 '기둥·벽 없음' 조건을 도면에 표기. 자체소방대로 기동표시등을 생략한다면 별표 8 규모 근거를 남김</td></tr>
+<tr><td style="border:1px solid #d9dde2;padding:8px 10px;vertical-align:top;text-align:left"><b>시공</b></td><td style="border:1px solid #d9dde2;padding:8px 10px;vertical-align:top;text-align:left">함·표시등의 성능인증 제품 여부. 위치표시등은 함 상부, 기동표시등은 함 상부 또는 직근에 적색등. 함 표면 "소화전" 표시</td></tr>
+<tr><td style="border:1px solid #d9dde2;padding:8px 10px;vertical-align:top;text-align:left"><b>감리</b></td><td style="border:1px solid #d9dde2;padding:8px 10px;vertical-align:top;text-align:left">문 개방·밸브 조작·호스 수납에 장애가 없는지 실제로 열어 보고 확인(가구·마감재 간섭). 사용요령 표지판의 외국어·그림 포함 여부, 문 부착 시 안·밖 모두 부착</td></tr>
+<tr><td style="border:1px solid #d9dde2;padding:8px 10px;vertical-align:top;text-align:left"><b>유지관리·점검</b></td><td style="border:1px solid #d9dde2;padding:8px 10px;vertical-align:top;text-align:left">위치표시등 점등, 펌프 기동 시 기동표시등 점등 여부. 함 앞 적치물·잠금으로 문 개방 장애가 생기지 않았는지. 표지판 훼손·탈락</td></tr></table>
+<p style="font-size:19px;font-weight:bold;border-bottom:1px solid #cfd4da;padding-bottom:4px;margin-top:28px">5. 적용 시점과 경과조치</p>
+<p><b>현행본:</b> 국립소방연구원공고 제2026-34호(2026. 7. 1. 시행). 국가법령정보센터 연혁에는 이 판본과 제정본(소방청공고 제2022-209호, 2022. 12. 1. 시행) 두 판본만 있습니다.</p>
+<p><b>연혁 대조:</b> 두 판본의 2.4(2.4.1~2.4.5) 본문을 국가법령정보센터에서 대조한 결과 문구가 같습니다. 즉 이 글의 내용은 2022. 12. 1. 이후 바뀌지 않았습니다. NFTC 102 이전의 「옥내소화전설비의 화재안전기준(NFSC 102)」 시절 문구는 이번에 대조하지 않았습니다(확인하지 못함).</p>
+<p style="font-size:19px;font-weight:bold;border-bottom:1px solid #cfd4da;padding-bottom:4px;margin-top:28px">공식 원문 링크</p>
+<p>· <a href="https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000281772&amp;chrClsCd=010202">옥내소화전설비의 화재안전기술기준(NFTC 102) 현행 — 국립소방연구원공고 제2026-34호</a><br/>
+· <a href="https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000216245&amp;chrClsCd=010202">NFTC 102 제정본 — 소방청공고 제2022-209호(2022. 12. 1. 시행)</a><br/>
+· <a href="https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000273564&amp;chrClsCd=010202">옥내소화전설비의 화재안전성능기준(NFPC 102) 현행 — 제7조(함 및 방수구 등)</a></p>
+<p style="color:#5d6670;font-size:13px">2026. 11. 11. 국가법령정보센터 원문 기준으로 작성했습니다. 기준은 개정될 수 있으니 적용 시점의 원문을 확인하세요.</p>
+
+<p style="color:#1d4f7a">#옥내소화전 #NFTC102 #소화전함 #위치표시등 #기동표시등 #사용요령표지판 #소방점검</p></div>
+<script>
+let n=0;const go=document.getElementById('go'),m=document.getElementById('m');
+async function cp(id){const el=document.getElementById(id);
+try{const h=new Blob([el.innerHTML],{type:'text/html'}),t=new Blob([el.innerText],{type:'text/plain'});
+await navigator.clipboard.write([new ClipboardItem({'text/html':h,'text/plain':t})]);return true;}
+catch(e){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);
+try{return document.execCommand('copy');}catch(_){return false;}}}
+async function step(){
+ if(n%2===0){if(await cp('t')){m.textContent='제목 복사됨 → 네이버 제목 칸에 Ctrl+V. 다음은 본문입니다.';go.textContent='② 본문 복사';n++;}else m.textContent='복사가 막혔습니다. Ctrl+C를 누르세요.';}
+ else{if(await cp('c')){m.textContent='본문 복사됨 → 네이버 본문에 Ctrl+V. 끝나면 발행하세요.';go.textContent='처음부터 다시 (① 제목)';n++;}else m.textContent='복사가 막혔습니다. Ctrl+C를 누르세요.';}
+}
+async function zipAll(){const imgs=[...document.querySelectorAll('#c img')];if(!imgs.length){m.textContent='이 글에는 그림이 없습니다.';return;}
+ m.textContent='그림 묶는 중...';
+ try{const z=new JSZip();let i=1;for(const im of imgs){const r=await fetch(im.src);const b=await r.blob();z.file(String(i).padStart(2,'0')+'_그림.png',b);i++;}
+ const out=await z.generateAsync({type:'blob'});const a=document.createElement('a');a.href=URL.createObjectURL(out);a.download='hydrant-cabinet-lamp_그림.zip';document.body.appendChild(a);a.click();a.remove();
+ m.textContent='그림 '+imgs.length+'장을 ZIP으로 받았습니다(다운로드 폴더).';}
+ catch(e){m.textContent='ZIP 만들기 실패 — 그림을 오른쪽 클릭해 하나씩 저장하세요.';}}
+</script></body></html>
