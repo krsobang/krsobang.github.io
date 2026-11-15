@@ -1,0 +1,80 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>내진 앵커볼트, 아무 앵커나 써도 될까요? — 최대허용하중을 정하는 5가지 기준 | 소방 실무 기준 노트</title><meta name="description" content="소방시설의 내진설계 기준 제3조의2제3항 — 앵커볼트 설치 5개 호(정착부 기준, 최대허용하중 결정 요소, 버팀대 앵커 0.43, 프라잉·편심, 팽창성·화학성 부재 1.5배)와 제4항 기초 패드, 제14조·제16조 450 N 단서를 원문으로 정리합니다."><style>
+:root{--fg:#1f2328;--muted:#5d6670;--line:#e2e5e9;--accent:#1d4f7a;--red:#c00000;--bg:#fff;--soft:#f6f7f9}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--fg:#e6e8eb;--muted:#a3abb4;--line:#30363d;--accent:#7fb2e5;--bg:#16191d;--soft:#1e2227}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.75 "Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+a{color:var(--accent)}header.site{border-bottom:1px solid var(--line)}header.site .in,main,footer .in{max-width:780px;margin:0 auto;padding:0 16px}
+header.site .in{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;padding-top:14px;padding-bottom:10px}
+header.site .brand{font-weight:700;font-size:1.15em;color:var(--fg);text-decoration:none}nav a{color:var(--muted);text-decoration:none;font-size:.92em;margin-right:12px}nav a:hover{color:var(--accent)}
+main{padding-top:22px;padding-bottom:40px}h1{font-size:1.6em;line-height:1.35;margin:.2em 0 .3em}h2{font-size:1.15em;margin-top:1.8em;border-bottom:1px solid var(--line);padding-bottom:4px}
+.meta{color:var(--muted);font-size:.9em}.rule{border:3px solid var(--red);padding:14px 16px;margin:14px 0;border-radius:2px}.rule p{margin:.4em 0}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:.95em}th,td{border:1px solid var(--line);padding:6px 8px;text-align:left}th{background:var(--soft)}
+img{max-width:100%;height:auto;background:#fff;border:1px solid var(--line)}figure{margin:16px 0}.note{font-size:.88em;color:var(--muted)}
+.ai{display:inline-block;font-size:.8em;border:1px solid var(--line);border-radius:3px;padding:1px 6px;color:var(--muted);margin-left:6px}
+ul.list{list-style:none;padding:0}ul.list li{padding:14px 0;border-bottom:1px solid var(--line)}ul.list a.t{font-weight:700;font-size:1.08em;text-decoration:none;color:var(--fg)}ul.list a.t:hover{color:var(--accent)}
+.hero{background:var(--soft);border-radius:12px;padding:18px 20px;margin:4px 0 16px}.hero h1{margin:.2em 0 .2em}
+.chip{display:inline-block;border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:1px 10px;font-size:.82em;margin:0 4px 6px 0;color:var(--muted)}
+.one{background:var(--bg);border-left:4px solid var(--red);border-radius:6px;padding:12px 14px;margin:12px 0 8px;font-size:1.08em}.why{margin:0}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 8px}@media(max-width:640px){.tiles{grid-template-columns:1fr}}
+.tile{border:1px solid var(--line);border-radius:8px;padding:12px 14px}.tile .k{font-size:.8em;color:var(--muted)}.tile .v{font-size:1.3em;font-weight:800;line-height:1.3}.tile .s{font-size:.82em;color:var(--muted)}
+.red{color:var(--red);font-weight:700}td.chg{background:rgba(192,0,0,.05)}
+.tl{display:flex;align-items:flex-start;margin:8px 0 4px}.st{flex:1;text-align:center;position:relative;font-size:.9em}
+.st:before{content:"";position:absolute;top:9px;left:0;right:0;height:3px;background:var(--line)}.st:first-child:before{left:50%}.st:last-child:before{right:50%}
+.dot{width:20px;height:20px;border-radius:50%;background:var(--bg);border:3px solid #6b7783;margin:0 auto 6px;position:relative}.st.now .dot{border-color:var(--red);background:var(--red)}
+details{border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:8px 0}summary{font-weight:700;cursor:pointer}
+
+.tags{margin-top:28px;padding-top:12px;border-top:1px solid var(--line)}.tags span{display:inline-block;font-size:.85em;color:var(--accent);background:var(--soft);border-radius:12px;padding:2px 10px;margin:3px 4px 3px 0}
+table.check td{vertical-align:top}
+.cat{font-size:.82em;color:var(--accent);margin-right:8px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85em}footer .in{padding-top:14px;padding-bottom:24px}
+</style></head><body>
+<header class="site"><div class="in"><a class="brand" href="../index.html">소방 실무 기준 노트</a><nav><a href="../category/law.html">소방 법개정</a><a href="../category/seismic.html">소방 내진개정</a><a href="../category/guide.html">소방시설 지침</a><a href="../category/edu.html">교육 및 해설서</a><a href="../category/qa.html">질의·해석사례</a><a href="../category/forms.html">각종서류</a></nav></div></header>
+<main><div class="hero"><span class="chip"><a href="../category/edu.html" style="color:inherit;text-decoration:none">교육 및 해설서</a></span><span class="chip">소방청고시 제2026-1호 (2026. 3. 1. 시행)</span><span class="chip">기준일 2026-11-16</span><span class="chip">AI 활용 그림 포함</span><h1>내진 앵커볼트, 아무 앵커나 써도 될까요? — 최대허용하중을 정하는 5가지 기준</h1><div class="meta">소방시설의 내진설계 기준 제3조의2제3항·제4항 · 제3조제11호 · 제14조·제16조 단서</div><div class="one"><b>한 줄 요약</b> — 앵커볼트는 <b>"건축물 내진설계기준" 비구조요소 정착부 기준</b>으로 설치하고, 정착부 두께·간격·모서리 거리·콘크리트 강도·균열 여부로 <b>최대허용하중</b>을 정합니다. 버팀대 앵커는 <b>제조사 설계하중 × 0.43</b>, 팽창성·화학성·부분 현장타설 부재에 정착하면 <b>수평지진하중 × 1.5</b>.</div><p class="why"><b>왜?</b> 기기와 배관이 아무리 튼튼해도 건물에 붙잡아 두는 앵커가 먼저 빠지면 지진 때 넘어지거나 떨어지기 때문에, 앵커 쪽 하중 여유를 따로 정해 둔 기준입니다.</p></div><div class="tiles"><div class="tile"><div class="k">버팀대 앵커</div><div class="v"><span class="red">× 0.43</span></div><div class="s">제조사 설계하중에 곱해 최대허용하중</div></div><div class="tile"><div class="k">팽창성·화학성 부재 정착</div><div class="v">지진하중 × 1.5</div><div class="s">부분 현장타설 부재 포함</div></div><div class="tile"><div class="k">제어반등·소화전함</div><div class="v">450 N 이하</div><div class="s">내력벽·기둥이면 Ø8 mm 이상 볼트 4개 이상 가능</div></div></div><h2>1. 공식 기준 원문 (소방시설의 내진설계 기준, 현행)</h2>
+<div class="rule">
+<p><b>제3조의2(공통 적용사항)</b> ③ 앵커볼트는 다음 각 호의 기준에 따라 설치한다.</p>
+<p>1. 수조, 가압송수장치, 함, 제어반등, 비상전원, 가스계 및 분말소화설비의 저장용기 등은 "건축물 내진설계기준" 비구조요소의 정착부의 기준에 따라 앵커볼트를 설치하여야 한다.<br>
+2. 앵커볼트는 건축물 정착부의 두께, 볼트설치 간격, 모서리까지 거리, 콘크리트의 강도, 균열 콘크리트 여부, 앵커볼트의 단일 또는 그룹설치 등을 확인하여 최대허용하중을 결정하여야 한다.<br>
+3. 흔들림 방지 버팀대에 설치하는 앵커볼트 최대허용하중은 제조사가 제시한 설계하중 값에 0.43을 곱하여야 한다.<br>
+4. 건축물 부착 형태에 따른 프라잉효과나 편심을 고려하여 수평지진하중의 작용하중을 구하고 앵커볼트 최대허용하중과 작용하중과의 내진설계 적정성을 평가하여 설치하여야 한다.<br>
+5. 소방시설을 팽창성ㆍ화학성 또는 부분적으로 현장타설된 건축부재에 정착할 경우에는 수평지진하중을 1.5배 증가시켜 사용한다.</p>
+<p>④ 수조ㆍ가압송수장치ㆍ제어반등 및 비상전원 등을 바닥에 고정하는 경우 기초(패드 포함)부분의 구조안전성을 확인하여야 한다.</p>
+</div>
+<div class="rule">
+<p><b>제14조(제어반등)</b> 1. 제어반등의 지진하중은 제3조의2제2항에 따라 계산하고, 앵커볼트는 제3조의2제3항에 따라 설치하여야 한다. 단, 제어반등의 하중이 450N 이하이고 내력벽 또는 기둥에 설치하는 경우 직경 8mm 이상의 고정용 볼트 4개 이상으로 고정할 수 있다.</p>
+<p><b>제16조(소화전함)</b> 3. 소화전함의 지진하중은 제3조의2제2항에 따라 계산하고, 앵커볼트는 제3조의2제3항에 따라 설치하여야 한다. 단, 소화전함의 하중이 450N 이하이고 내력벽 또는 기둥에 설치하는 경우 직경 8mm 이상의 고정용 볼트 4개 이상으로 고정할 수 있다.</p>
+</div>
+<p class="note">용어(제3조제11호): “근입 깊이”란 앵커볼트가 벽면 또는 바닥면 속으로 들어가 인발력에 저항할 수 있는 구간의 길이를 말합니다. 같은 제3조의2제3항을 인용하는 조문은 제14조(제어반등)·제16조(소화전함) 외에 제17조제1호(자가발전설비)와 제18조제1항(가스계·분말소화설비 저장용기)이 있습니다.</p>
+<h3>원문 화면</h3>
+<figure><img loading="lazy" src="../assets/img/2026-11-16-seismic-anchor-bolt/src1.png" alt="소방시설의 내진설계 기준 제3조의2제3항 앵커볼트 기준과 제14조·제16조 단서 원문 문구를 옮긴 이미지, 소방청고시 제2026-1호"><figcaption>제3조·제3조의2·제14조·제16조 원문 — 국가법령정보센터 게시 문구를 그대로 옮긴 이미지(화면 캡처 아님), 2026. 11. 16. 확인, [시행 2026. 3. 1.] 소방청고시 제2026-1호</figcaption></figure>
+
+<h2>2. 적용 조건</h2>
+<p><b>① 대상은 “기기”와 “버팀대” 두 갈래입니다.</b> 제1호는 수조·가압송수장치·함·제어반등·비상전원·가스계 및 분말소화설비 저장용기 같은 기기를, 제3호는 흔들림 방지 버팀대에 쓰는 앵커를 따로 정합니다.</p>
+<p><b>② 기기 앵커는 소방 기준에 수치가 없습니다.</b> 원문은 “건축물 내진설계기준” 비구조요소 정착부 기준을 따르라고 하고, 최대허용하중을 정할 때 확인할 항목(정착부 두께, 볼트 간격, 모서리까지 거리, 콘크리트 강도, 균열 콘크리트 여부, 단일·그룹 설치)만 열거합니다. 구체 수치는 건축물 내진설계기준과 제조사 자료에서 확인해야 합니다.</p>
+<p><b>③ 버팀대 앵커는 0.43을 곱합니다.</b> 제조사가 제시한 설계하중에 0.43을 곱한 값이 최대허용하중입니다.</p>
+<p><b>④ 하중 쪽 보정 두 가지.</b> 부착 형태에 따른 프라잉효과·편심을 고려해 작용하중을 구하고(제4호), 팽창성·화학성 또는 부분적으로 현장타설된 건축부재에 정착하면 수평지진하중을 1.5배로 올려 씁니다(제5호).</p>
+<p><b>⑤ 450 N 단서는 제어반등과 소화전함에만 있습니다.</b> 하중 450 N 이하이고 내력벽 또는 기둥에 설치하는 경우에 한해 직경 8 mm 이상 고정용 볼트 4개 이상으로 고정할 수 있습니다. 바닥 설치나 칸막이벽 설치는 원문상 이 단서 대상이 아닙니다.</p>
+<p><b>⑥ 바닥에 고정하면 기초(패드 포함)의 구조안전성도</b> 확인합니다(제4항).</p>
+
+<h2>3. 그림으로 보기</h2>
+<figure><img loading="lazy" src="../assets/img/2026-11-16-seismic-anchor-bolt/fig1.png" alt="바닥에 앵커로 고정한 제어반, 벽에 볼트 4개로 고정한 소화전함, 천장 슬래브에 앵커로 고정한 횡방향 흔들림 방지 버팀대를 표시한 입체 개념도"></figure>
+<figure><img loading="lazy" src="../assets/img/2026-11-16-seismic-anchor-bolt/fig2.png" alt="콘크리트 바닥 단면에 앵커볼트 두 개를 그리고 근입 깊이, 모서리까지 거리, 볼트 설치 간격, 정착부 두께를 표시한 단면 개념도"></figure>
+<p class="note">그림은 모두 AI(Claude)로 그린 <b>비축척 개념도</b>입니다. 원문에 있는 확인 항목·계수만 표시했고, 앵커 종류·개수·배치, 기초 패드 상세, 종방향 버팀대, 수조·펌프·비상전원·저장용기는 생략했습니다. 설치 적합 판정용 도면이 아닙니다.</p>
+<p><b>측정 기준점 주의:</b> 원문은 “모서리까지 거리”, “볼트설치 간격”을 확인 항목으로만 쓰고 어디서 어디까지 재는지, 최소 몇 mm인지는 정하지 않습니다. 그림 2의 치수선은 볼트 중심 기준으로 그렸는데 이는 일반적 해석이며, 실제 값과 기준점은 건축물 내진설계기준과 앵커 제조사 자료를 따르세요. <b>해석이 갈리는 현장은 관할 소방서에 먼저 확인하세요.</b></p>
+
+<h2>4. 단계별 확인사항</h2>
+<table class="check"><tr><th style="width:22%">단계</th><th>확인할 것</th></tr>
+<tr><td><b>설계</b></td><td>기기별 지진하중(제3조의2제2항) 산정 → 앵커 최대허용하중 결정 근거(정착부 두께·간격·모서리 거리·콘크리트 강도·균열 여부·단일/그룹)를 계산서에 남김. 버팀대 앵커는 제조사 설계하중 × 0.43 적용. 팽창성·화학성·부분 현장타설 부재 정착이면 수평지진하중 × 1.5. 프라잉·편심 반영 여부 확인</td></tr>
+<tr><td><b>시공</b></td><td>설계와 같은 앵커 제품·규격·개수·근입 깊이로 시공. 현장에서 정착 부재가 바뀌면(예: 슬래브 → 다른 부재) 설계 재검토. 제어반등·소화전함을 450 N 단서로 볼트 고정할 때는 내력벽·기둥인지 확인</td></tr>
+<tr><td><b>감리</b></td><td>앵커 제조사 설계하중 자료와 계산서의 0.43·1.5배 적용 여부 대조. 450 N 단서를 쓴 기기는 하중 근거와 설치 벽체 종류 확인. 바닥 고정 기기는 기초(패드) 구조안전성 검토서 확인</td></tr>
+<tr><td><b>유지관리·점검</b></td><td>기기 교체·이설 후 앵커 재시공 여부, 앵커 풀림·부식, 패드 균열 확인</td></tr></table>
+
+<h2>5. 적용 시점과 경과조치</h2>
+<p><b>현행본:</b> 소방청고시 제2026-1호(2026. 1. 30. 발령, 2026. 3. 1. 시행).</p>
+<p><b>연혁 대조:</b> 제3조의2제3항(제1~5호)·제4항, 제3조제11호, 제14조제1호, 제16조제3호, 제17조제1호, 제18조제1항 문구를 개정 전 판본(소방청고시 제2022-76호, 2022. 12. 1. 시행)과 국가법령정보센터에서 대조한 결과 같습니다. 제2026-1호 개정에서 이 조문들은 바뀌지 않았습니다.</p>
+<p><b>경과조치(부칙 제2026-1호 제2조):</b> 이 고시 시행 전에 건축허가 등의 신청 또는 신고를 하거나 소방시설공사의 착공신고를 한 특정소방대상물에 대해서는 종전의 기준에 따릅니다.</p>
+<p class="note">확인하지 못한 것: 제2022-76호보다 이전 판본의 앵커볼트 문구, 그리고 “건축물 내진설계기준(KDS 41 17 00)” 비구조요소 정착부 기준의 세부 내용은 이번에 원문을 대조하지 않았습니다.</p>
+
+<h2>공식 원문 링크</h2>
+<p>· <a href="https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000273292&amp;chrClsCd=010202">소방시설의 내진설계 기준 현행(소방청고시 제2026-1호) — 본문·부칙·별표</a><br>
+· <a href="https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000216346&amp;chrClsCd=010202">개정 전 판본(소방청고시 제2022-76호, 2022. 12. 1. 시행)</a><br>
+· 같이 보기: <a href="seismic-pump-stopper.html">가압송수장치 내진스토퍼·가요성이음장치 — 제5조</a>, <a href="seismic-branch-restraint.html">가지배관 고정장치 — 제13조·별표 4</a></p>
+<div class="tags"><span>#소방내진</span><span>#내진설계기준</span><span>#앵커볼트</span><span>#근입깊이</span><span>#흔들림방지버팀대</span><span>#제어반</span><span>#소화전함</span></div></main><footer><div class="in">공식 원문(국가법령정보센터·소방청·국립소방연구원)을 기준으로 작성합니다. 적용 전 해당 시점의 원문을 확인하세요.</div></footer></body></html>
