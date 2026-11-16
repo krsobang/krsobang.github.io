@@ -25,3 +25,4 @@
 - 2026-11-16 09:00 KST: 공개 확인(PC 내장 브라우저) — posts/seismic-anchor-bolt.html 제목·본문(h2 6개) 정상, 그림 3장 로딩(src1 1800px, fig1·fig2 2000px). naver/seismic-anchor-bolt.html 제목·본문·그림 3장 로딩 정상.
 - 2026-11-16 09:03 KST: 네이버 임시저장 중단 — Chrome 확장에서 blog.naver.com 글쓰기 화면 열기가 확장의 안전 제한('This site is not allowed due to safety restrictions')으로 2회 거부됨(11-13과 같음). 네이버에 아무것도 입력·저장하지 않음. naver_drafts 미추가. 복사용 링크로 직접 붙여넣기 필요.
 - 2026-11-16: 사용자 지시로 정기 글 비율 변경 — 법개정 없는 날 지침 1 : 해설 2(해설→해설→지침 순환, state.json rotation). 소방청 법령자료실에서 업무 관련 지침·가이드라인 17건을 guideline_pool에 등록. 첨부 PDF는 PC 내장 브라우저에서 pdf.js로 텍스트 확인 가능(cntId=46으로 시험). 원본 PDF 이미지는 PC 폴더 미연결 시 옮길 수 없어 원문 문구 이미지로 대체하는 규칙 추가. 다음 정기 실행(11-17)은 지침 차례.
+- 2026-11-16: 사용자 지시로 그림 방식 보강 — 글 맨 위 요약 인포그래픽(fig0, poster.py) 추가, scene.html에 style:'real'(질감·그림자·톤매핑)·window·smoke 추가. seismic-anchor-bolt에 fig0 적용.

@@ -1,0 +1,126 @@
+{
+ "w": 1200,
+ "title": "내진 앵커볼트",
+ "highlight": "제대로 고르기",
+ "subtitle": "제조사 설계하중을 그대로 쓰면 안 됩니다",
+ "badge": "소방시설의 내진설계 기준 제3조의2제3항·제4항 · 소방청고시 제2026-1호(2026. 3. 1. 시행)",
+ "rows": [
+  {
+   "h": 420,
+   "panels": [
+    {
+     "n": 1,
+     "title": "대상 기기 확인",
+     "span": 12,
+     "scene": "p1.json",
+     "callout_w": 300,
+     "callout_top": 60,
+     "callouts": [
+      {
+       "label": "수조·가압송수장치·함·제어반등·비상전원·저장용기",
+       "value": "정착부 기준 앵커"
+      },
+      {
+       "label": "근거",
+       "value": "건축물 내진설계기준"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": 360,
+   "panels": [
+    {
+     "n": 2,
+     "title": "최대허용하중 결정",
+     "span": 7,
+     "scene": "p2.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "정착부 두께 · 볼트 간격 · 모서리 거리"
+      },
+      {
+       "label": "콘크리트 강도 · 균열 여부 · 단일/그룹"
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "title": "버팀대 앵커",
+     "span": 5,
+     "scene": "p3.json",
+     "callout_w": 230,
+     "callout_top": 170,
+     "callouts": [
+      {
+       "label": "최대허용하중 =",
+       "value": "설계하중 × 0.43"
+      }
+     ],
+     "callout_pos": "overlay"
+    }
+   ]
+  },
+  {
+   "h": 330,
+   "panels": [
+    {
+     "n": 4,
+     "title": "정착 부재 보정",
+     "span": 6,
+     "scene": "p4.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "팽창성·화학성·부분 현장타설 부재",
+       "value": "수평지진하중 × 1.5"
+      },
+      {
+       "label": "프라잉효과·편심 고려해 작용하중 산정"
+      }
+     ]
+    },
+    {
+     "n": 5,
+     "title": "450 N 단서",
+     "span": 6,
+     "scene": "p5.json",
+     "callout_w": 290,
+     "callout_top": 50,
+     "callouts": [
+      {
+       "label": "제어반등·소화전함 450 N 이하 + 내력벽·기둥",
+       "value": "Ø8 mm↑ 볼트 4개↑"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": 300,
+   "panels": [
+    {
+     "n": 6,
+     "title": "바닥 고정이면 기초(패드)도 확인",
+     "span": 12,
+     "scene": "p6.json",
+     "callout_w": 300,
+     "callout_top": 40,
+     "callouts": [
+      {
+       "label": "수조·가압송수장치·제어반등·비상전원",
+       "value": "기초 구조안전성 확인"
+      },
+      {
+       "label": "근거",
+       "value": "제3조의2제4항"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "footer": "AI(Claude) 작성 비축척 3D 개념도 · 수치·계수는 국가법령정보센터 원문(2026. 11. 16. 확인)에 있는 것만 표시 · 소방 실무 기준 노트"
+}
