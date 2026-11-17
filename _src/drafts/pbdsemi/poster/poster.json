@@ -1,0 +1,117 @@
+{
+ "w": 1200,
+ "title": "반도체 공장 성능위주설계",
+ "highlight": "2025. 12. 개정",
+ "subtitle": "가이드라인 「7. 반도체 분야」 소방시설 항목, 무엇이 늘었나",
+ "badge": "소방청 「소방시설등 성능위주설계 평가 운영 표준 가이드라인」 2025. 12. 1. 반도체 분야 일부 개정 · 법적 구속력 없음(원문)",
+ "rows": [
+  {
+   "h": 330,
+   "panels": [
+    {
+     "n": 1,
+     "title": "소방관 진입창",
+     "span": 6,
+     "scene": "p1.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "수평거리 40 m 이내마다 설치 기준",
+       "value": "완화 적용 가능"
+      },
+      {
+       "label": "클린룸·외조기실 등",
+       "value": "설치 안 할 수 있음"
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "title": "장애물 위·아래 헤드",
+     "span": 6,
+     "scene": "p2.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "장애물 최상부·최하단 반영",
+       "value": "단서 신설"
+      },
+      {
+       "label": "불연·난연 장애물 하단이 바닥에서",
+       "value": "1.2 m 이하면 제외"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": 330,
+   "panels": [
+    {
+     "n": 3,
+     "title": "긴급차단 설비(신설)",
+     "span": 7,
+     "scene": "p3.json",
+     "callout_w": 240,
+     "callout_top": 56,
+     "callouts": [
+      {
+       "label": "생산지역 습식 스프링클러",
+       "value": "설치 가능"
+      },
+      {
+       "label": "전용 방재실 별도 제어반",
+       "value": "수동 작동"
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "title": "배관 유속(신설)",
+     "span": 5,
+     "scene": "p4.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "수리계산으로 구경 정할 때",
+       "value": "10 ㎧ 초과 금지"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": 320,
+   "panels": [
+    {
+     "n": 5,
+     "title": "호스릴 소화전(신설)",
+     "span": 6,
+     "scene": "p5.json",
+     "callout_pos": "overlay",
+     "callout_top": 250,
+     "callouts": [
+      {
+       "label": "호스릴 옥내소화전·미분무",
+       "value": "25 m(보행 40 m)"
+      }
+     ]
+    },
+    {
+     "n": 6,
+     "title": "물류자동화 구역(신설)",
+     "span": 6,
+     "scene": "p6.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "장애물 폭 3배 이격 곤란 시",
+       "value": "8.2 ℓ/㎡·min 이상"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "footer": "AI(Claude) 작성 비축척 3D 개념도 · 문구·수치는 소방청 법령자료실 게시 가이드라인 PDF 원문(2026. 11. 17. 확인)에 있는 것만 · 생략: 소화가스 과압배출구, 특별피난계단 대책, 건축·시뮬레이션 항목 · 소방 실무 기준 노트"
+}
