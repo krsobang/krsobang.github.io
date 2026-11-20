@@ -1,0 +1,116 @@
+{
+ "w": 1200,
+ "title": "소화기 점검,",
+ "highlight": "10개 항목",
+ "subtitle": "매뉴얼 점검표 1-A-001~010 — 작동점검 8개 + 종합점검만(●) 2개",
+ "badge": "소방청 「소방시설등 점검관리 매뉴얼」(2025. 9.) 1권 제1절 · 자체점검사항 고시 별지 제4호 · NFTC 101 2.1.1",
+ "rows": [
+  {
+   "h": 380,
+   "panels": [
+    {
+     "n": 1,
+     "title": "높이·표지",
+     "span": 6,
+     "scene": "p1.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "1-A-002",
+       "value": "바닥에서 1.5 m 이하"
+      },
+      {
+       "label": "1-A-005 주차장 표지",
+       "value": "1.5 m 이상"
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "title": "배치거리",
+     "span": 6,
+     "scene": "p2.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "1-A-003 보행거리",
+       "value": "소형 20 m · 대형 30 m"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": 340,
+   "panels": [
+    {
+     "n": 3,
+     "title": "구획된 거실",
+     "span": 6,
+     "scene": "p3.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "1-A-004",
+       "value": "33 ㎡ 이상 거실마다"
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "title": "지시압력계",
+     "span": 6,
+     "scene": "p4.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "1-A-007 (매뉴얼 설명)",
+       "value": "녹색 0.7~0.98 MPa"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": 320,
+   "panels": [
+    {
+     "n": 5,
+     "title": "분말 내용연수",
+     "span": 6,
+     "scene": "p5.json",
+     "callout_w": 290,
+     "callout_top": 40,
+     "callouts": [
+      {
+       "label": "1-A-008 (시행령 제19조)",
+       "value": "10년"
+      },
+      {
+       "label": "성능확인 합격 시 (품질관리규칙 제2조의2⑥)",
+       "value": "3년 / 1년 연장"
+      }
+     ]
+    },
+    {
+     "n": 6,
+     "title": "● 종합점검만",
+     "span": 6,
+     "scene": "p6.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "1-A-009",
+       "value": "설치수량"
+      },
+      {
+       "label": "1-A-010",
+       "value": "적응성"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "footer": "AI(Claude) 작성 비축척 3D 개념도 · 문구·수치는 매뉴얼·국가법령정보센터 원문(2026. 11. 20. 확인)에 있는 것만 · 소방 실무 기준 노트"
+}

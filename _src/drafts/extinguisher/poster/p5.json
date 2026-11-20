@@ -1,0 +1,1 @@
+{"style": "real", "camera": {"pos": [1.5, 1.2, 2.8], "target": [1.25, 0.6, 0.35], "fov": 40}, "objects": [{"type": "extinguisher", "pos": [0.9, 0, 0.35], "s": 1.5, "label": "분말"}], "dims": [], "labels": [], "room": {"x": [-1, 3], "y": [0, 2.6], "z": [0, 3]}}

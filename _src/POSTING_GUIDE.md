@@ -45,7 +45,7 @@ meta 필드로 상단을 만든다(build.py가 자동 배치):
 - 출처: 사용자가 준 공문 PDF, 또는 공식 누리집 게시물만. 기본 탐색처: 소방청 누리집 법령자료실(/nfa/publicrelations/legalinformation/archives/), 공지사항. 찾아서 임의로 만들지 않는다.
 - 첨부 PDF 읽는 법(검증된 방법): PC 내장 브라우저로 게시글을 연 뒤, 링크의 `Jnit_boardDownload('<파일경로>',...)`에서 경로를 꺼내 페이지 안에서 `fetch` → cdnjs pdf.js 4.4.168(`pdf.min.mjs`, 워커는 `pdf.worker.min.mjs`를 fetch해 Blob URL로 만든 `new Worker(url,{type:'module'})`를 `GlobalWorkerOptions.workerPort`에 지정)로 텍스트를 뽑는다. 본문 내용은 이렇게 확인한 문구만 쓴다.
 - **원본 필수(2026-11-17 사용자 지시): 지침 글에는 원본 PDF 페이지를 그림으로 반드시 넣고, 원본 페이지를 묶은 PDF도 함께 첨부한다.** 원문 문구 이미지만으로 대신하지 않는다(문구 이미지는 `<details>`로 보조로만).
-  - 방법(검증됨, 2026-11-17): PC 내장 브라우저 게시글 페이지에서 pdf.js로 첨부 PDF를 연 뒤, 필요한 쪽을 `page.render`로 canvas(scale 1.6)에 그려 `toDataURL('image/jpeg',0.82)`로 만든다. 한 쪽씩 `'PAGE<n>:'+dataURL`을 javascript_tool 결과로 돌려받으면 결과가 tool-results 파일로 저장되므로, 클라우드에서 그 파일의 base64를 디코드해 `assets/img/<날짜-slug>/orig-p<쪽>.jpg`로 저장한다(쪽당 약 200 KB).
+  - 방법(검증됨, 2026-11-17): PC 내장 브라우저 게시글 페이지에서 pdf.js로 첨부 PDF를 연 뒤, 필요한 쪽을 `page.render`로 canvas(scale 1.6)에 그려 `toDataURL('image/jpeg',0.82)`로 만든다. 브라우저 창이 숨김 상태면 기본 렌더가 멈추므로 `page.render({...,intent:'print'})`로 렌더한다(2026-11-20 확인). 큰 PDF(수십 MB)는 내려받기만 수십 초 걸리므로 내려받기·렌더를 호출 여러 번으로 나눈다. 한 쪽씩 `'PAGE<n>:'+dataURL`을 javascript_tool 결과로 돌려받으면 결과가 tool-results 파일로 저장되므로, 클라우드에서 그 파일의 base64를 디코드해 `assets/img/<날짜-slug>/orig-p<쪽>.jpg`로 저장한다(쪽당 약 200 KB).
   - 원본 페이지 JPG들을 PIL로 묶어 `assets/img/<날짜-slug>/<이름>-p<시작>-<끝>.pdf`를 만들고 본문에 "원본 발췌 PDF 받기" 링크를 단다. 전체 원본은 공식 게시글 링크로 안내한다.
   - 넣는 쪽: 공문(시행문)이면 전 쪽, 책자형 지침·매뉴얼이면 표지(또는 이력 쪽)와 글에서 다루는 장의 쪽 전부.
   - 개인정보가 있는 쪽(담당자·결재자 이름, 전화·팩스, 이메일)은 PIL로 해당 부분을 회색 상자로 가리고 "개인정보 가림"을 캡션에 적는다. 가릴 위치는 렌더 이미지를 직접 열어 확인한다. 가리기 어려운 쪽은 넣지 않고 그 사실을 적는다.
