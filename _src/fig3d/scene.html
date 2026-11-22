@@ -151,6 +151,15 @@ const DEV={
   box([x+w/2-.09,y+h*.3,z+d+.012],[x+w/2-.06,y+h*.48,z+d+.035],M('#d9d9d9',{metalness:.7,roughness:.3}));
   const L=new THREE.Mesh(new THREE.SphereGeometry(.045,20,14,0,Math.PI*2,0,Math.PI/2),M('#e0443a',{emissive:'#e0443a',emissiveIntensity:.7}));L.rotation.x=Math.PI/2;L.position.set(x,y+h+.08,z+.03);add(L);
   box([x-.06,y+h+.03,z],[x+.06,y+h+.13,z+.03],M('#9aa3ab'));outlineFrom(n0)},
+ alarm_box(p,o){const [x,y,z]=p,w=o.w||.42,h=o.h||.62,d=o.d||.11;const rd=M('#c62f28',{roughness:.35,metalness:.2});const n0=sc.children.length;
+  box([x-w/2,y,z],[x+w/2,y+h,z+d],rd);box([x-w/2+.02,y+.02,z+d],[x+w/2-.02,y+h-.02,z+d+.01],M('#d8392f',{roughness:.3,metalness:.2}));
+  const L=new THREE.Mesh(new THREE.SphereGeometry(.05,24,14,0,Math.PI*2,0,Math.PI/2),M('#ff3b2f',{emissive:'#ff2a1a',emissiveIntensity:.9,roughness:.25}));L.rotation.x=Math.PI/2;L.position.set(x,y+h*.85,z+d+.012);add(L,false);
+  cyl([x,y+h*.85,z+d+.008],[x,y+h*.85,z+d+.016],.062,MAT.steel);
+  const B=new THREE.Mesh(new THREE.SphereGeometry(.11,32,16,0,Math.PI*2,0,Math.PI/2),M('#b8bec4',{metalness:.75,roughness:.25}));B.rotation.x=Math.PI/2;B.position.set(x,y+h*.56,z+d+.012);add(B);
+  cyl([x,y+h*.56,z+d+.11],[x,y+h*.56,z+d+.13],.018,MAT.dark);
+  box([x-w*.36,y+h*.05,z+d+.008],[x+w*.36,y+h*.36,z+d+.012],M('#f4f1e8',{roughness:.5}));const pn=new THREE.Mesh(new THREE.PlaneGeometry(w*.6,h*.11),texPanel(o.label||'발신기','#f4f1e8','#c62f28',w*.6,h*.11));pn.position.set(x,y+h*.29,z+d+.014);add(pn,false);pn.userData.noOutline=true;
+  cyl([x,y+h*.14,z+d+.012],[x,y+h*.14,z+d+.022],.06,MAT.dark);cyl([x,y+h*.14,z+d+.022],[x,y+h*.14,z+d+.045],.045,M('#e0443a',{roughness:.3}));
+  outlineFrom(n0)},
  extinguisher(p,o){const [x,y,z]=p,k=o.s||1,R=.08*k,H=.42*k;const n0=sc.children.length;const rd=M(o.color||'#c62f28',{roughness:.3,metalness:.25});
   cyl([x,y,z],[x,y+H,z],R,rd,32);const dm=new THREE.Mesh(new THREE.SphereGeometry(R,32,16,0,Math.PI*2,0,Math.PI/2),rd);dm.position.set(x,y+H,z);add(dm);
   cyl([x,y,z],[x,y+.012*k,z],R*1.02,MAT.dark,32);

@@ -1,0 +1,111 @@
+{
+ "w": 1200,
+ "title": "발신기,",
+ "highlight": "어디에 몇 높이로?",
+ "subtitle": "층마다 · 수평거리 25 m · 스위치 0.8~1.5 m · 위치표시등은 함 상부 적색등",
+ "badge": "비상경보설비 및 단독경보형감지기의 화재안전기술기준(NFTC 201) 2.1.5 · 소방청공고 제2022-222호(2022. 12. 1. 시행)",
+ "rows": [
+  {
+   "h": 380,
+   "panels": [
+    {
+     "n": 1,
+     "title": "설치 대상 확인",
+     "span": 6,
+     "scene": "p1.json",
+     "callout_w": 240,
+     "callout_top": 50,
+     "callouts": [
+      {
+       "label": "시행령 별표 4 제2호나목 연면적",
+       "value": "400 ㎡ 이상"
+      },
+      {
+       "label": "지하층·무창층 바닥면적",
+       "value": "150 ㎡ 이상"
+      },
+      {
+       "label": "(공연장 100 ㎡)"
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "title": "조작스위치 높이",
+     "span": 6,
+     "scene": "p2.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "2.1.5.1 바닥으로부터",
+       "value": "0.8~1.5 m"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": 330,
+   "panels": [
+    {
+     "n": 3,
+     "title": "층마다 · 수평거리",
+     "span": 6,
+     "scene": "p3.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "2.1.5.2 각 부분에서",
+       "value": "25 m 이하"
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "title": "복도·구획된 실",
+     "span": 6,
+     "scene": "p4.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "2.1.5.2 단서 보행거리",
+       "value": "40 m 이상 → 추가"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": 330,
+   "panels": [
+    {
+     "n": 5,
+     "title": "위치표시등",
+     "span": 6,
+     "scene": "p5.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "2.1.5.3 함 상부 적색등",
+       "value": "15° · 10 m"
+      }
+     ]
+    },
+    {
+     "n": 6,
+     "title": "같은 함의 경종(음향장치)",
+     "span": 6,
+     "scene": "p6.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "2.1.4 중심에서 1 m",
+       "value": "90 dB 이상"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "footer": "AI(Claude) 작성 비축척 3D 개념도 · 조문·수치는 국가법령정보센터 원문(2026. 11. 23. 확인)에 있는 것만 표시 · 생략: 수신기·배선·전원 · 소방 실무 기준 노트"
+}
