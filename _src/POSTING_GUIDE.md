@@ -4,7 +4,7 @@
 1. `_src/state.json`과 `_src/log.md`를 읽는다.
 2. **법령 변경 확인** — 공식 원문만 사용:
    - 국가법령정보센터(law.go.kr): 소방시설법, 화재예방법, 소방시설공사업법, 위험물안전관리법(각 시행령·시행규칙), NFPC·NFTC 전체, 소방시설의 내진설계 기준
-   - 소방청 누리집의 공지사항·법령/고시 게시판, 국립소방연구원 NFTC 공고(사용자 PC 내장 브라우저로 열람; 못 열면 log.md에 "확인하지 못함"으로 기록하고 추측하지 않는다)
+   - 소방청 누리집의 공지사항·법령/고시 게시판, 국립소방연구원 NFTC 정보시스템(https://nftc.nfire.go.kr) 최근 제·개정 코드(사용자 PC 내장 브라우저로 열람; 못 열면 log.md에 "확인하지 못함"으로 기록하고 추측하지 않는다)
    - law.go.kr은 웹 조회(WebFetch)로 본문이 안 읽히므로 사용자 PC의 브라우저(내장 브라우저 우선, 안 되면 Chrome 확장)로 연다.
    - `state.json`의 `known_versions`와 공고번호·시행일을 대조한다.
 3. **오늘(KST) 날짜의 글이 이미 있으면** 게시하지 않고, 확인 결과만 `log.md`에 기록한다.
@@ -106,6 +106,11 @@ meta 필드로 상단을 만든다(build.py가 자동 배치):
 ## 입법·행정예고 알림 (2026-11-11 사용자 요청: 보고에만 표로, 블로그 게시 안 함)
 - 대상은 **업무 관련 법령·기준만**: `state.json` `notice_scope.include`. 소방공무원 인사·119구조구급·소방장비 등 `exclude`는 다루지 않는다.
 - 매 실행마다 소방청 누리집 입법예고(/nfa/publicrelations/legalinformation/legislation/)·행정예고(/administration/) 게시판과 국립소방연구원 NFTC 정보시스템 '코드 제·개정 예고'를 PC 내장 브라우저로 확인한다.
+- **예고 본문 여는 법(2026-11-24 확인, 매 실행마다 본문까지 확인한다):**
+  - 입법예고: 소방청 게시판 행의 hidden input `listOgLmPpSeq` 값(예 89456)을 법제처 누리집 `https://www.moleg.go.kr/lawinfo/makingInfo.mo?mid=a10104010000&lawSeq=<값>&lawCd=0&lawType=TYPE5`에 넣어 PC 내장 브라우저에서 `fetch`로 읽는다(개정이유·주요내용 포함). 국민참여입법센터 `/gcom/ogLmPp/<값>`은 내장 브라우저에서 404.
+  - 행정예고: 게시판 행 링크의 `fn_Detail('<ogAdmPpSeq>','TYPE6','<mappingAdmRulSeq>')` 값으로 `https://opinion.lawmaking.go.kr/gcom/admpp/<ogAdmPpSeq>?announceType=TYPE6&mappingAdmRulSeq=<값>`을 만든 뒤, 내장 브라우저(404)가 아니라 **사용자 PC PowerShell**(mcp__remote-devices__windows-mcp__PowerShell, `Invoke-WebRequest -UseBasicParsing`, 브라우저 User-Agent 헤더)로 받아 태그를 지우고 '개정이유'~'의견제출' 부분을 읽는다.
+  - 보고의 링크는 입법예고는 법제처 makingInfo 주소, 행정예고는 위 국민참여입법센터 주소(파라미터 포함)를 쓴다. 본문 담당자 이름·전화·이메일은 옮기지 않는다.
+- **NFTC 정보시스템 주소는 `https://nftc.nfire.go.kr`** (2026-11-24 확인, 옛 nftc.nifos.go.kr는 접속 안 됨). 내장 브라우저에서 열린다. `/kor/anno/revisedNotice.do`(코드 제·개정 예고), `/kor/guide/codeLastest.do`(최근 제·개정 코드), `/kor/anno/notice.do`(공지사항)를 `fetch`로 읽는다.
 - **블로그·네이버에는 올리지 않는다.** 사용자 보고(SendUserMessage)에 표 하나로만 보여준다: | 상태(신규/진행 중) | 법령·기준명 | 구분·예고번호 | 의견제출 기간 | 주요 내용 한 줄 |. 표 아래에 예고별 공식 링크(소방청 게시글 또는 국민참여입법센터)를 목록으로 붙인다.
 - 주요 내용은 예고 본문을 열어 확인한 것만, 못 열면 "본문 확인하지 못함". 대상 예고가 없으면 "업무 관련 진행 중 예고 없음" 한 줄.
 - 의견제출 기간이 끝난 예고는 표에서 뺀다. 처음 본 예고는 `notices_seen`에 추가한다(신규 판별용).
