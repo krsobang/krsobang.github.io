@@ -1,0 +1,80 @@
+{
+ "w": 1200,
+ "title": "고층 수계설비,",
+ "highlight": "4가지 강화",
+ "subtitle": "건축위원회(심의) 표준 가이드라인 Ⅱ-5~8 항목",
+ "badge": "소방청 「건축위원회(심의) 표준 가이드라인」(2023. 12.) · 대조: NFTC 604(제2023-44호) · NFTC 102(제2026-34호)",
+ "rows": [
+  {
+   "h": 340,
+   "panels": [
+    {
+     "n": 1,
+     "title": "펌프·급수배관 분리",
+     "span": 6,
+     "scene": "p1.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "가이드라인 Ⅱ-5",
+       "value": "설비별 분리"
+      },
+      {
+       "label": "NFTC 604 2.1.3·2.2.3",
+       "value": "고층은 설비 전용"
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "title": "수직배관 이중화",
+     "span": 6,
+     "scene": "p2.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "NFTC 604 2.1.6·2.2.6 (50층 이상)",
+       "value": "수직배관 2개 이상"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": 330,
+   "panels": [
+    {
+     "n": 3,
+     "title": "수원·작동시간",
+     "span": 6,
+     "scene": "p3.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "NFTC 604 2.1.1 (50층 이상 7.8 ㎥)",
+       "value": "개수 × 5.2 ㎥"
+      },
+      {
+       "label": "가이드라인 Ⅱ-7",
+       "value": "20 / 40 / 60분"
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "title": "옥상수조",
+     "span": 6,
+     "scene": "p4.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "유효수량 외에 (NFTC 604 2.1.2·2.2.2)",
+       "value": "3분의 1 이상"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "footer": "AI(Claude) 작성 비축척 3D 개념도 · 문구·수치는 가이드라인 PDF·국가법령정보센터 원문(2026. 11. 25. 확인)에 있는 것만 · 생략: 밸브류·제어반·바이패스 배관 상세, 수조 연결배관"
+}
