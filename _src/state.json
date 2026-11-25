@@ -304,74 +304,329 @@
   "note": "2026-11-16 사용자 지시: 지침 1 : 해설 2. 11-13·11-16 해설 → 다음 정기 실행은 지침. 글을 쓴 날마다 next를 순환(해설→해설→지침→해설…). 법개정 글을 쓴 날은 넘기지 않음. inbox 공문은 지침 차례로 침. 2026-11-17 지침 게시 → next 해설. 2026-11-18 해설 게시 → next 해설(그다음 지침). 2026-11-19 해설 게시 → next 지침. 2026-11-20 지침 게시 → next 해설. 2026-11-23 해설 게시 → next 해설(그다음 지침). 2026-11-24 해설 게시 → next 지침. 2026-11-25 지침 게시 → next 해설."
  },
  "guideline_pool": {
-  "note": "2026-11-16 소방청 법령자료실 목록에서 업무 관련 지침·가이드라인·매뉴얼만 추림(게시일 기준). 쓰기 전 게시글·첨부 원문을 열어 확인하고, 오래된 것은 현행 반영·대체 여부를 확인한다. 이미 확인한 것: cntId=46 첨부 공문 1쪽 텍스트(2023. 6. 28. 시행, 관련근거 2022. 4. 22. 지침·2022. 5. 24. 적용유예 → 변경 지침 시달). 2026-11-17: cntId=60(반도체 분야 개정 성능위주설계 가이드라인) 게시 후 풀에서 뺌. 같은 가이드라인 직전 판 cntId=58은 이번 대조에 사용(별도 글 미작성). 2026-11-17 사용자 지시: 성능위주설계 가이드라인(cntId=58 등)은 풀에서 제외, 앞으로도 추가하지 않음. 지침 글은 원본 페이지 이미지·발췌 PDF 필수. 2026-11-20: cntId=57 점검관리 매뉴얼(1권 소화기구 절)로 지침 글 게시 후 풀에서 뺌(매뉴얼의 다른 장은 필요 시 다시 추가 가능). cntId=59는 PBD 관련 여부 확인 전까지 보류. 2026-11-20 사용자 지시: 점검 관련 자료(점검관리 매뉴얼·세대점검·작동/종합점검 등)는 앞으로 다루지 않음. 풀에서 제외하고 새로 발견해도 추가하지 않는다. 이미 게시한 글은 그대로 둔다. 2026-11-24 사용자 지시: cntId=59(생활숙박시설 복도폭 완화 화재안전성 검토 인정 가이드라인)는 성능위주설계 관련으로 보아 제외, 풀에서 삭제. 2026-11-25: cntId=49(건축위원회(심의) 표준 가이드라인) Ⅱ-5~8 수계설비 항목으로 지침 글 게시 후 풀에서 뺌(다른 장은 필요 시 다시 추가 가능).",
+  "note": "2026-11-16 소방청 법령자료실 목록에서 업무 관련 지침·가이드라인·매뉴얼만 추림(게시일 기준). 쓰기 전 게시글·첨부 원문을 열어 확인하고, 오래된 것은 현행 반영·대체 여부를 확인한다. 이미 확인한 것: cntId=46 첨부 공문 1쪽 텍스트(2023. 6. 28. 시행, 관련근거 2022. 4. 22. 지침·2022. 5. 24. 적용유예 → 변경 지침 시달). 2026-11-17: cntId=60(반도체 분야 개정 성능위주설계 가이드라인) 게시 후 풀에서 뺌. 같은 가이드라인 직전 판 cntId=58은 이번 대조에 사용(별도 글 미작성). 2026-11-17 사용자 지시: 성능위주설계 가이드라인(cntId=58 등)은 풀에서 제외, 앞으로도 추가하지 않음. 지침 글은 원본 페이지 이미지·발췌 PDF 필수. 2026-11-20: cntId=57 점검관리 매뉴얼(1권 소화기구 절)로 지침 글 게시 후 풀에서 뺌(매뉴얼의 다른 장은 필요 시 다시 추가 가능). cntId=59는 PBD 관련 여부 확인 전까지 보류. 2026-11-20 사용자 지시: 점검 관련 자료(점검관리 매뉴얼·세대점검·작동/종합점검 등)는 앞으로 다루지 않음. 풀에서 제외하고 새로 발견해도 추가하지 않는다. 이미 게시한 글은 그대로 둔다. 2026-11-24 사용자 지시: cntId=59(생활숙박시설 복도폭 완화 화재안전성 검토 인정 가이드라인)는 성능위주설계 관련으로 보아 제외, 풀에서 삭제. 2026-11-25: cntId=49(건축위원회(심의) 표준 가이드라인) Ⅱ-5~8 수계설비 항목으로 지침 글 게시 후 풀에서 뺌(다른 장은 필요 시 다시 추가 가능). 2026-11-25 사용자 지시: 지침 글은 '소방청·시도 본부가 공문으로 시달한 업무처리 지침'(예: 내진설계기준 업무적용 지침, 완공검사제도 개선·시행지침, 화재안전기준 지침정리집 수록 지침, 피트공간 헤드 적용 공문)만 다룬다. 건축위원회 심의 가이드라인·업무처리 표준 매뉴얼 같은 책자형 가이드라인은 블로그 카테고리와 맞지 않아 제외(cntId=48·49 삭제). 사용자 제공 원본은 _src/guidelines/에 보관(inbox 아님, 순번 유지). 지침정리집(2024. 12., 소방청·국립소방연구원·한국화재소방학회) 쪽 번호는 책 쪽수(book_page), PDF 쪽 = 책 쪽 + 7 안팎이라 열어서 확인. 고르는 순서: 9·10장(질의회신 성격)보다 지침 공문 우선, 그 안에서 최신순.",
   "source": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/",
   "items": [
    {
-    "title": "「건축허가 등의 동의 업무처리 표준 매뉴얼」 알림",
-    "posted_on": "2024-01-08",
+    "title": "[지침정리집 1-1] 커튼박스 부위 등 CPVC 배관 적용기준",
+    "date": "2019-10-14",
+    "std": "NFTC 103",
     "kind": "소방설비",
-    "url": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=48"
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 2,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 1-2] 개방형 격자 천장의 화재안전기준 적용 관련 업무처리 지침 알림",
+    "date": "2021-03-16",
+    "std": "NFTC 103",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 7,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 1-3] 스프링클러설비의 화재안전기준 적용 지침 수정알림",
+    "date": "2019-10-22",
+    "std": "NFTC 103",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 11,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 1-4] 알람(습식)밸브 사이트글라스 적용 관련 질의회신 알림",
+    "date": "2018-03-09",
+    "std": "NFTC 103",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 16,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 1-5] 소방용 배관 보온재료 난연성능 확보 철저 지시",
+    "date": "2016-09-02",
+    "std": "NFTC 103",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 22,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 1-6] 수계소화설비 가압송수장치 설치방안 회신",
+    "date": "2015-08-03",
+    "std": "NFTC 103",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 30,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 2-1] 비상방송설비 성능개선을 위한 세부추진지침 알림",
+    "date": "2019-02-12",
+    "std": "NFTC 202",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 36,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 3-1] 공동주택 세대 내 감지기 설치 업무처리 지침 알림",
+    "date": "2019-06-26",
+    "std": "NFTC 203",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 47,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 3-2] 비화재보 관리방법 및 감지기 선정을 위한 참고자료 안내",
+    "date": "2019-09-30",
+    "std": "NFTC 203",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 53,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 4-1] 피난기구의 화재안전기준 질의회신 알림",
+    "date": "2016-12-12",
+    "std": "NFTC 301",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 68,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 4-2] 노유자시설 피난기구 설치기준 적용지침",
+    "date": "2018-01-24",
+    "std": "NFTC 301",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 72,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 4-3] 피난구조설비(간이완강기) 형식승인용품 사용안내",
+    "date": "2020-04-21",
+    "std": "NFTC 301",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 77,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 4-4] 감사원 감사 결과에 따른 노유자시설 피난기구 조치사항 안내",
+    "date": "2020-05-08",
+    "std": "NFTC 301",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 85,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 5-1] 제연설비 차압감지관 및 차압측정공에 대한 회신",
+    "date": "2011-02-24",
+    "std": "NFTC 501A",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 93,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 5-2] 창문용 자동폐쇄장치 등 제연설비 관련 업무처리 지침알림",
+    "date": "2012-05-18",
+    "std": "NFTC 501A",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 101,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 5-3] 「승강로를 이용한 급기방식」 제연설비 성능확보 추진계획 알림",
+    "date": "2020-02-04",
+    "std": "NFTC 501A",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 116,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 6-1] 지하구의 화재안전기준 개정에 따른 업무처리 지침",
+    "date": "2021-12-17",
+    "std": "NFTC 605",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 125,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 7-1] 피트공간 등 소방시설 설치기준 적용 변경 지침",
+    "date": "2012-01-06",
+    "std": "NFTC 103 등",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 136,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 8-1] 비상발전기 및 부속실 제연설비 운영지침 시달",
+    "date": "2010-10-01",
+    "std": "NFTC 혼합",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 151,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 8-2] 화재안전기준(배출댐퍼, 비상전원) 적용 지침 알림",
+    "date": "2018-06-12",
+    "std": "NFTC 혼합",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 160,
+    "type": "지침 공문"
+   },
+   {
+    "title": "[지침정리집 9-1] 시각경보기 설치대상 중 부속된 주차장에 시각경보기 적용관련",
+    "date": "2021-02-17",
+    "std": "NFTC 203",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 167,
+    "type": "질의회신 성격(아고라·소민센)"
+   },
+   {
+    "title": "[지침정리집 9-2] 복층구조 소방시설(감지기) 설치 시 적용기준",
+    "date": "2021-03-10",
+    "std": "NFTC 203",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 184,
+    "type": "질의회신 성격(아고라·소민센)"
+   },
+   {
+    "title": "[지침정리집 9-3] 대피 시 피난구유도등 만으로 피난층 출입구 식별곤란",
+    "date": "2021-06-16",
+    "std": "NFTC 303",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 193,
+    "type": "질의회신 성격(아고라·소민센)"
+   },
+   {
+    "title": "[지침정리집 9-4] 가스계 비상전원 설치 관련",
+    "date": "2021-08-25",
+    "std": "NFTC 106·107",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 205,
+    "type": "질의회신 성격(아고라·소민센)"
+   },
+   {
+    "title": "[지침정리집 9-5] 스프링클러설비의 수직배수배관 설치기준",
+    "date": "2021-10-13",
+    "std": "NFTC 103",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 216,
+    "type": "질의회신 성격(아고라·소민센)"
+   },
+   {
+    "title": "[지침정리집 9-6] 물분무등소화설비가 면제되는 스프링클러설비 적용 시 차고·주차장 물분무소화설비 배수설비 면제여부",
+    "date": "2021-12-03",
+    "std": "NFTC 104",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 220,
+    "type": "질의회신 성격(아고라·소민센)"
+   },
+   {
+    "title": "[지침정리집 9-7] 복층형 공동주택 출입구 없는 층의 연결송수관설비 방수구 설치 여부",
+    "date": "2022-04-04",
+    "std": "NFTC 502",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 226,
+    "type": "질의회신 성격(아고라·소민센)"
+   },
+   {
+    "title": "[지침정리집 10-1] 스프링클러설비의 화재안전기준(스테인리스강관 등) 관련 전문가회의 결과 보고",
+    "date": "2019-12-10",
+    "std": "NFTC 103",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2024-12-firesafety-guideline-collection.pdf",
+    "book_page": 231,
+    "type": "질의회신 성격(아고라·소민센)"
+   },
+   {
+    "title": "소방시설의 내진설계기준 업무적용 지침(소방분석제도과)",
+    "date": "2022-04",
+    "std": "소방시설의 내진설계 기준 제4조(수조)",
+    "kind": "내진설비",
+    "source": "_src/guidelines/2022-04-seismic-work-guideline.pdf",
+    "type": "지침 공문",
+    "note": "법령자료실 cntId=46(2023. 6. 28. 변경 지침)과 함께 확인해 현행 여부를 밝힐 것. 11-05 이전 블로그 '내진 수조·기초 패드' 글과 주제 겹침 확인"
+   },
+   {
+    "title": "소방시설 완공검사제도 개선·시행지침 알림(소방산업과-2650)",
+    "date": "2020-08-03",
+    "std": "소방시설공사업법 완공검사·감리결과보고",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2020-08-completion-inspection-guideline.pdf",
+    "type": "지침 공문",
+    "note": "업로드 PDF는 공문 1쪽뿐, 붙임 지침 본문은 법령자료실 cntId=12에서 받을 것"
+   },
+   {
+    "title": "스프링클러설비헤드 기준 적용 철저(방호과-1713) / 헤드 설치 기준 적용 질의회신 사례 시달(방호과-2467)",
+    "date": "2011-06-13",
+    "std": "NFTC 103 헤드 설치 제외(파이프덕트·피트)",
+    "kind": "소방설비",
+    "source": "_src/guidelines/2011-pit-sprinkler-head.pdf",
+    "type": "지침 공문",
+    "note": "스캔 PDF 18쪽. 지침정리집 7-1(2012. 1. 6.)과 함께 다루면 좋음. 11-13 글(sprinkler-head-exclusion)과 겹침 확인"
    },
    {
     "title": "「소방시설의 내진설계 기준」 업무처리 가이드라인 알림(소방분석제도과-6813, 2023. 6. 28.)",
-    "posted_on": "2023-06-29",
     "kind": "내진설비",
-    "url": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=46"
+    "type": "지침 공문",
+    "source": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=46",
+    "date": "2023-06-29"
    },
    {
     "title": "(소방청 공고 제2022-41호) 전기저장시설의 소방시설 설치·유지기준 특례 적용을 위한 표준시험 방법",
-    "posted_on": "2022-03-17",
     "kind": "소방설비",
-    "url": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=33"
+    "type": "지침 공문",
+    "source": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=33",
+    "date": "2022-03-17"
    },
    {
     "title": "위험물안전관리법령 관련 가스계소화설비 특례적용 지침",
-    "posted_on": "2022-01-10",
     "kind": "소방설비",
-    "url": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=31"
-   },
-   {
-    "title": "지하구의 화재안전기준 개정에 따른 업무지침 알림",
-    "posted_on": "2021-12-28",
-    "kind": "소방설비",
-    "url": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=28"
+    "type": "지침 공문",
+    "source": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=31",
+    "date": "2022-01-10"
    },
    {
     "title": "소방시설공사업법 민원업무처리기준",
-    "posted_on": "2021-09-28",
     "kind": "소방설비",
-    "url": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=27"
+    "type": "지침 공문",
+    "source": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=27",
+    "date": "2021-09-28"
    },
    {
     "title": "가스계소화설비 성능인증 및 제품검사 확인 재강조",
-    "posted_on": "2021-08-06",
     "kind": "소방설비",
-    "url": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=24"
+    "type": "지침 공문",
+    "source": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=24",
+    "date": "2021-08-06"
    },
    {
     "title": "개정된 소방시설성능시험조사표 적용시점 등 알림",
-    "posted_on": "2021-07-22",
     "kind": "소방설비",
-    "url": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=22"
-   },
-   {
-    "title": "승강로를 통한 급기방식 제연설비 성능확보 추진계획",
-    "posted_on": "2020-11-11",
-    "kind": "소방설비",
-    "url": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=13"
-   },
-   {
-    "title": "소방시설완공검사제도 개선지침",
-    "posted_on": "2020-08-10",
-    "kind": "소방설비",
-    "url": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=12"
-   },
-   {
-    "title": "비상방송설비 성능개선을 위한 세부 추진지침",
-    "posted_on": "2019-10-24",
-    "kind": "소방설비",
-    "url": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=4"
+    "type": "지침 공문",
+    "source": "https://www.nfa.go.kr/nfa/publicrelations/legalinformation/archives/?boardId=bbs_0000000000000018&mode=view&cntId=22",
+    "date": "2021-07-22"
    }
   ],
   "exclude": [
