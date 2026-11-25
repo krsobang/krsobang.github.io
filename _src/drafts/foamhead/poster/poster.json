@@ -1,0 +1,107 @@
+{
+ "w": 1200,
+ "title": "포헤드,",
+ "highlight": "몇 ㎡마다 몇 m 간격?",
+ "subtitle": "포워터스프링클러헤드 8 ㎡ · 포헤드 9 ㎡ · 유효반경 2.1 m · 벽은 간격의 1/2",
+ "badge": "포소화설비의 화재안전기술기준(NFTC 105) 2.9.2 · 국립소방연구원공고 제2024-37호(2024. 7. 1. 시행)",
+ "rows": [
+  {
+   "h": 360,
+   "panels": [
+    {
+     "n": 1,
+     "title": "어디에 쓰나 (2.1.1)",
+     "span": 6,
+     "scene": "p1.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "차고·주차장 · 특수가연물 공장·창고",
+       "value": "항공기격납고"
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "title": "바닥면적마다 1개 이상",
+     "span": 6,
+     "scene": "p2.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "포워터스프링클러헤드",
+       "value": "8 ㎡"
+      },
+      {
+       "label": "포헤드",
+       "value": "9 ㎡"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": 330,
+   "panels": [
+    {
+     "n": 3,
+     "title": "정방형 배치 간격",
+     "span": 6,
+     "scene": "p3.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "2.9.2.5.1 S = 2 × r × cos45°",
+       "value": "r = 2.1 m"
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "title": "벽·방호구역 경계",
+     "span": 6,
+     "scene": "p4.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "2.9.2.6 헤드 상호간 거리의",
+       "value": "1/2 이하"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": 330,
+   "panels": [
+    {
+     "n": 5,
+     "title": "보가 있는 부분",
+     "span": 6,
+     "scene": "p5.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "표 2.9.2.4 수평 1.5 m 이상이면 수직",
+       "value": "0.15~0.3 m 미만"
+      }
+     ]
+    },
+    {
+     "n": 6,
+     "title": "1분당 방사량 (주차장)",
+     "span": 6,
+     "scene": "p6.json",
+     "callout_pos": "overlay",
+     "callouts": [
+      {
+       "label": "표 2.9.2.3 합성계면활성제포, 바닥 1 ㎡당",
+       "value": "8.0 L 이상"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "footer": "AI(Claude) 작성 비축척 3D 개념도 · 포헤드 형상은 단순화 · 조문·수치는 국가법령정보센터 원문(2026. 11. 26. 확인), ≈ 값은 원문 식으로 계산한 값 · 생략: 수원·혼합장치·개방밸브·배관 상세"
+}
