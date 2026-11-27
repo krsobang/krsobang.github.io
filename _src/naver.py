@@ -64,7 +64,8 @@ def convert(p):
         el['style'] = f'color:{GRAY};font-size:13px'
     for el in soup.find_all('h2'):
         el.name = 'p'
-        el['style'] = 'font-size:19px;font-weight:bold;border-bottom:1px solid #cfd4da;padding-bottom:4px;margin-top:28px'
+        # 2026-11-27 사용자 지시: 네이버에 붙이면 border-bottom이 별도 구분선·빈 줄로 바뀌어 제목과 표 사이가 크게 벌어짐 → 테두리·여백 없이 글자 서식만
+        el['style'] = 'font-size:19px;font-weight:bold;color:#1f3150'
     for t in soup.find_all('table'):
         t['style'] = 'border-collapse:collapse;width:100%'
     for c in soup.find_all(['td', 'th']):
